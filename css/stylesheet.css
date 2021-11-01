@@ -1,0 +1,190 @@
+/**
+ * Content
+ */
+
+body {
+	background-color: #fff;
+	color: #000;
+}
+
+a:active {
+	opacity: 0.7;
+}
+
+.page a.active {
+	font-style: italic;
+}
+
+i,
+em {
+	font-style: italic;
+}
+
+b,
+strong {
+	font-weight: bold;
+}
+
+sub,
+sup {
+	position: relative;
+	vertical-align: baseline;
+}
+
+sub {
+	top: 0.3em;
+}
+
+sup {
+	top: -0.4em;
+}
+
+s {
+	text-decoration: line-through;
+}
+
+img {
+	border: 0;
+	padding: 0;
+}
+
+ul,
+ol {
+	margin: 0;
+	padding: 0 0 0 2em;
+}
+
+blockquote {
+	margin: 0;
+	padding: 0 0 0 2em;
+}
+
+hr {
+	background: rgba(0, 0, 0, 0.18);
+	border: 0;
+	height: 1px;
+	display: block;
+}
+
+.content img {
+	float: none;
+	margin-bottom: 0em;
+}
+
+[data-predefined-style="true"] bodycopy {
+	font-size: 1.9rem;
+	font-weight: 400;
+	color: rgba(0, 0, 0, 0.76);
+	font-family: "Dolly Pro", Icons;
+	font-style: normal;
+	line-height: 1.5;
+}
+
+[data-predefined-style="true"] bodycopy a {
+	color: #ff4f00;
+	padding-bottom: 0.1em;
+	border-bottom: 0.0em solid rgba(127, 127, 127, 0.3);
+	text-decoration: underline;
+}
+
+[data-predefined-style="true"] bodycopy a:hover {
+
+}
+
+bodycopy a.image-link,
+bodycopy a.icon-link,
+bodycopy a.image-link:hover,
+bodycopy a.icon-link:hover {
+	border-bottom: 0;
+	padding-bottom: 0;
+}
+
+[data-predefined-style="true"] h1 {
+	font-family: Sabon, Icons;
+	font-style: normal;
+	font-weight: 400;
+	padding: 0;
+	margin: 0;
+	font-size: 4.7rem;
+	line-height: 1.1;
+	color: rgba(0, 0, 0, 0.76);
+	}
+
+[data-predefined-style="true"] h1 a {
+	color: rgb(0, 0, 0);
+}
+
+[data-predefined-style="true"] h2 {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif, "Sans Serif", Icons;
+	font-style: normal;
+	font-weight: 400;
+	padding: 0;
+	margin: 0;
+	color: rgba(0, 0, 0, 0.76);
+	font-size: 2.8rem;
+	line-height: 1.3;
+	}
+
+[data-predefined-style="true"] h2 a {
+	color: rgba(0, 0, 0, 0.85);
+}
+
+[data-predefined-style="true"] small {
+	display: inline-block;
+	font-size: 1.2rem;
+	line-height: 1.5;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif, "Sans Serif", Icons;
+	font-style: normal;
+	font-weight: 400;
+	color: rgba(0, 0, 0, 0.76);
+}
+
+[data-predefined-style="true"] small a {
+	color: #ff4f00;
+	font-weight: bold;
+}
+
+/**
+ * Breakpoints
+ */
+
+
+[data-css-preset] .page {
+    background-color: initial /*!page_bgcolor*/;
+}
+
+.mobile .page,
+[data-css-preset].mobile .page {
+	position: relative;
+	min-height: 10px;
+	max-width: 100%;
+	width: 100%;
+	background-color: transparent /*!page_bgcolor*/;
+}
+
+[data-css-preset] .container {
+	margin-left: 0 /*!content_left*/;
+	margin-right: auto /*!content_left*/;
+	text-align: left /*!text_left*/;
+}
+
+[data-css-preset] body {
+	background-color: rgb(255, 255, 255) /*!body_bgcolor*/;
+}
+
+[data-css-preset] .container_width {
+	width: 100% /*!content_left*/;
+}
+
+[data-css-preset] .content_padding {
+	padding-top: 4rem /*!main_margin*/;
+	padding-bottom: 4rem /*!main_margin*/;
+	padding-left: 4rem /*!main_margin*/;
+	padding-right: 4rem /*!main_margin*/;
+}
+
+
+[data-css-preset] text-limit {
+	display: inline-block /*!text_width*/;
+	max-width: 66rem/*!text_width*/;
+}
