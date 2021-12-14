@@ -1,0 +1,208 @@
+p {
+  margin-bottom: 20px;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+strong {
+  font-weight: bold;
+}
+
+.body {
+  margin-left: 0px;
+  background-color: hsla(0, 0%, 100%, 0);
+}
+
+.container {
+  position: absolute;
+  left: 80px;
+  display: block;
+  max-width: 30%;
+  margin: 60px auto 0px;
+  padding: 0px;
+  font-family: 'Droid Serif', serif;
+  -o-object-fit: fill;
+  object-fit: fill;
+}
+
+.heading {
+  margin-bottom: 40px;
+  font-family: Sabon, sans-serif;
+  font-size: 42px;
+  font-weight: 600;
+}
+
+.orange-text {
+  color: #ff4f00;
+}
+
+.link {
+  margin-top: 80px;
+  color: #ff4f00;
+  font-size: 22px;
+  font-weight: 400;
+}
+
+.link.small {
+  font-weight: 700;
+}
+
+.paragraph {
+  margin-bottom: 40px;
+  font-family: Dollypro, sans-serif;
+  font-size: 22px;
+  line-height: 28px;
+  font-weight: 400;
+}
+
+.small {
+  font-family: 'Droid Sans', sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.lightening-bolt {
+  margin-bottom: 30px;
+  margin-left: -8px;
+  font-family: 'Iconfont 0', sans-serif;
+  font-size: 36px;
+}
+
+.icon {
+  font-family: 'Iconfont 0', sans-serif;
+  color: #000;
+  font-size: 14px;
+}
+
+.icon.infinity {
+  font-size: 24px;
+}
+
+.footer {
+  font-size: 18px;
+}
+
+.footer.link {
+  margin-bottom: 80px;
+  font-family: 'Droid Sans', sans-serif;
+  color: #000;
+  font-size: 14px;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+.link-2 {
+  text-decoration: none;
+}
+
+@media screen and (max-width: 991px) {
+  .container {
+    max-width: 60%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .container {
+    left: 60px;
+    max-width: 80%;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .body {
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .container {
+    left: 7px;
+    max-width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 20px;
+  }
+
+  .heading {
+    margin-bottom: 26px;
+    font-size: 32px;
+    line-height: 34px;
+  }
+
+  .link {
+    font-size: 18px;
+  }
+
+  .link.small {
+    font-size: 14px;
+  }
+
+  .paragraph {
+    margin-bottom: 24px;
+    font-size: 18px;
+    line-height: 26px;
+  }
+}
+
+@font-face {
+  font-family: 'Iconfont 0';
+  src: url('../fonts/IconFont-Regular-0.9.3.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Fa 400';
+  src: url('../fonts/fa-regular-400.woff2') format('woff2'), url('../fonts/fa-regular-400.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Dollypro';
+  src: url('../fonts/DollyPro-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Dollypro';
+  src: url('../fonts/DollyPro-RegularItalic.woff') format('woff');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Sabon';
+  src: url('../fonts/Sabon-SemiBoldItalic.woff') format('woff');
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Dollypro';
+  src: url('../fonts/DollyPro-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Sabon';
+  src: url('../fonts/Sabon.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Sabon';
+  src: url('../fonts/Sabon-Italic.woff') format('woff');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Sabon';
+  src: url('../fonts/Sabon-SemiBold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
