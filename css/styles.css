@@ -91,10 +91,6 @@ strong {
   text-decoration: none;
 }
 
-.link-2 {
-  text-decoration: none;
-}
-
 @media screen and (max-width: 991px) {
   .container {
     max-width: 60%;
@@ -146,13 +142,6 @@ strong {
 @font-face {
   font-family: 'Iconfont 0';
   src: url('../fonts/IconFont-Regular-0.9.3.woff2') format('woff2');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Fa 400';
-  src: url('../fonts/fa-regular-400.woff2') format('woff2'), url('../fonts/fa-regular-400.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
