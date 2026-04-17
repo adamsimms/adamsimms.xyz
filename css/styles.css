@@ -4,12 +4,8 @@ p {
   line-height: 24px;
 }
 
-strong {
-  font-weight: bold;
-}
-
 .body {
-  margin-left: 0px;
+  margin-left: 0;
 }
 
 .container {
@@ -17,8 +13,8 @@ strong {
   left: 80px;
   display: block;
   max-width: 30%;
-  margin: 60px auto 0px;
-  padding: 0px;
+  margin: 60px auto 0;
+  padding: 0;
   font-family: 'Droid Serif', serif;
 }
 
