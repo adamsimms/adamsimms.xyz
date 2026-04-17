@@ -4,13 +4,8 @@ p {
   line-height: 24px;
 }
 
-strong {
-  font-weight: bold;
-}
-
 .body {
-  margin-left: 0px;
-  background-color: hsla(0, 0%, 100%, 0);
+  margin-left: 0;
 }
 
 .container {
@@ -18,16 +13,14 @@ strong {
   left: 80px;
   display: block;
   max-width: 30%;
-  margin: 60px auto 0px;
-  padding: 0px;
+  margin: 60px auto 0;
+  padding: 0;
   font-family: 'Droid Serif', serif;
-  -o-object-fit: fill;
-  object-fit: fill;
 }
 
 .heading {
-  margin-bottom: 40px;
-  font-family: Sabon, sans-serif;
+  margin-bottom: 4px;
+  font-family: Sabon, serif;
   font-size: 42px;
   font-weight: 600;
 }
@@ -37,7 +30,6 @@ strong {
 }
 
 .link {
-  margin-top: 80px;
   color: #ff4f00;
   font-size: 22px;
   font-weight: 400;
@@ -49,7 +41,7 @@ strong {
 
 .paragraph {
   margin-bottom: 40px;
-  font-family: Dollypro, sans-serif;
+  font-family: Dollypro, serif;
   font-size: 22px;
   line-height: 28px;
   font-weight: 400;
@@ -61,7 +53,7 @@ strong {
   line-height: 18px;
 }
 
-.lightening-bolt {
+.lightning-bolt {
   margin-bottom: 30px;
   margin-left: -8px;
   font-family: 'Iconfont 0', sans-serif;
@@ -88,10 +80,6 @@ strong {
   color: #000;
   font-size: 14px;
   font-weight: 400;
-  text-decoration: none;
-}
-
-.link-2 {
   text-decoration: none;
 }
 
@@ -123,7 +111,6 @@ strong {
   }
 
   .heading {
-    margin-bottom: 26px;
     font-size: 32px;
     line-height: 34px;
   }
@@ -146,13 +133,6 @@ strong {
 @font-face {
   font-family: 'Iconfont 0';
   src: url('../fonts/IconFont-Regular-0.9.3.woff2') format('woff2');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Fa 400';
-  src: url('../fonts/fa-regular-400.woff2') format('woff2'), url('../fonts/fa-regular-400.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
