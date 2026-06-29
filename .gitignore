@@ -20,8 +20,13 @@ yarn.lock
 
 # Build output
 css/*.min.css
+css/critical.css
 dist/
 build/
+
+# Generated images
+img/*.webp
+img/*.avif
 
 # Testing
 coverage/

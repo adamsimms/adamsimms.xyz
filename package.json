@@ -4,18 +4,38 @@
   "description": "Personal portfolio website for Adam Simms - technologist, designer, artist, and educator",
   "scripts": {
     "start": "npx serve .",
-    "build": "npm run build:css && npm run optimize",
+    "build": "npm run build:css && npm run build:critical && npm run build:images && npm run optimize",
     "build:css": "npx postcss css/styles.css -o css/styles.min.css && npx postcss css/normalize.css -o css/normalize.min.css",
+    "build:critical": "node scripts/critical-css.js",
+    "build:images": "node scripts/optimize-images.js",
     "minify:css": "npx clean-css-cli -o css/styles.min.css css/styles.css && npx clean-css-cli -o css/normalize.min.css css/normalize.css",
     "optimize": "node scripts/optimize.js",
     "lint": "npm run lint:html && npm run lint:css && npm run lint:js",
     "lint:html": "npx htmlhint index.html",
-    "lint:css": "npx stylelint 'css/**/*.css'",
-    "lint:js": "npx eslint 'js/**/*.js'",
+    "lint:css": "npx stylelint 'css/**/*.css' --allow-empty-input",
+    "lint:js": "npx eslint 'js/**/*.js' --ignore-pattern 'js/webflow.js'",
     "format": "npx prettier --write '**/*.{html,css,js,json,md}'",
     "validate": "npm run lint && npx html-validator --file=index.html",
     "lighthouse": "npx lighthouse https://adamsimms.xyz --output=html --output-path=./lighthouse-report.html",
-    "deploy": "echo 'Deploying to GitHub Pages' && git push origin main"
+    "deploy": "echo 'Deploying to GitHub Pages' && git push origin main",
+    "prepare": "husky"
+  },
+  "lint-staged": {
+    "*.html": [
+      "htmlhint",
+      "prettier --write"
+    ],
+    "*.css": [
+      "stylelint --fix",
+      "prettier --write"
+    ],
+    "*.js": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{json,md}": [
+      "prettier --write"
+    ]
   },
   "repository": {
     "type": "git",
@@ -31,14 +51,18 @@
   "devDependencies": {
     "autoprefixer": "^10.4.19",
     "clean-css-cli": "^5.6.3",
+    "critical": "^6.0.0",
     "cssnano": "^6.1.2",
     "eslint": "^8.57.0",
-    "htmlhint": "^1.1.4",
     "html-validator-cli": "^9.1.1",
+    "htmlhint": "^1.1.4",
+    "husky": "^8.0.0",
     "lighthouse": "^11.7.1",
+    "lint-staged": "^15.2.2",
     "postcss": "^8.4.38",
     "postcss-cli": "^11.0.0",
     "prettier": "^3.2.5",
+    "sharp-cli": "^4.2.0",
     "stylelint": "^16.3.1",
     "stylelint-config-standard": "^36.0.0"
   },
