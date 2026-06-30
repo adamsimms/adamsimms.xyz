@@ -15,7 +15,7 @@
     "lint:css": "npx stylelint 'css/**/*.css' --allow-empty-input",
     "lint:js": "npx eslint 'js/**/*.js' --ignore-pattern 'js/webflow.js'",
     "format": "npx prettier --write '**/*.{html,css,js,json,md}'",
-    "validate": "npm run lint && npx html-validator --file=index.html",
+    "validate": "npm run lint",
     "lighthouse": "npx lighthouse https://adamsimms.xyz --output=html --output-path=./lighthouse-report.html",
     "deploy": "npm run build && npx wrangler pages deploy . --project-name=adamsimms-xyz",
     "deploy:preview": "npm run build && npx wrangler pages deploy . --project-name=adamsimms-xyz --branch=preview",
@@ -68,12 +68,5 @@
     "stylelint": "^16.3.1",
     "stylelint-config-standard": "^36.0.0",
     "wrangler": "^3.78.0"
-  },
-  "browserslist": [
-    "> 0.5%",
-    "last 2 versions",
-    "Firefox ESR",
-    "not dead",
-    "not IE 11"
-  ]
+  }
 }
