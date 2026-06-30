@@ -17,7 +17,10 @@
     "format": "npx prettier --write '**/*.{html,css,js,json,md}'",
     "validate": "npm run lint && npx html-validator --file=index.html",
     "lighthouse": "npx lighthouse https://adamsimms.xyz --output=html --output-path=./lighthouse-report.html",
-    "deploy": "echo 'Deploying to GitHub Pages' && git push origin main",
+    "deploy": "npm run build && npx wrangler pages deploy . --project-name=adamsimms-xyz",
+    "deploy:preview": "npm run build && npx wrangler pages deploy . --project-name=adamsimms-xyz --branch=preview",
+    "cf:login": "npx wrangler login",
+    "cf:init": "npx wrangler pages project create adamsimms-xyz",
     "prepare": "husky"
   },
   "lint-staged": {
@@ -64,7 +67,8 @@
     "prettier": "^3.2.5",
     "sharp-cli": "^4.2.0",
     "stylelint": "^16.3.1",
-    "stylelint-config-standard": "^36.0.0"
+    "stylelint-config-standard": "^36.0.0",
+    "wrangler": "^3.78.0"
   },
   "browserslist": [
     "> 0.5%",
