@@ -2,9 +2,10 @@
   --color-primary: #ff4f00;
   --color-text: #000;
   --color-background: #fff;
-  --font-heading: Sabon, serif;
-  --font-body: Dollypro, serif;
-  --font-sans: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-heading: 'Outfit', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --font-sans: 'Inter', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
   --font-icon: 'Iconfont 0', sans-serif;
   --spacing-small: 4px;
   --spacing-medium: 20px;
@@ -37,6 +38,7 @@ p {
 
 .body {
   margin-left: 0;
+  font-family: var(--font-body);
 }
 
 .container {
@@ -145,7 +147,7 @@ p {
 }
 
 .course-code {
-  font-family: var(--font-sans);
+  font-family: var(--font-mono);
   font-weight: 700;
 }
 
@@ -178,7 +180,7 @@ p {
   color: var(--color-primary);
 }
 
-@media screen and (max-width: 991px) {
+@media screen and (width <= 991px) {
   .container {
     max-width: 60%;
   }
@@ -188,7 +190,7 @@ p {
   }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (width <= 767px) {
   .container {
     left: var(--spacing-xlarge);
     max-width: 80%;
@@ -200,7 +202,7 @@ p {
   }
 }
 
-@media screen and (max-width: 479px) {
+@media screen and (width <= 479px) {
   .body {
     margin-right: auto;
     margin-left: auto;
@@ -244,59 +246,17 @@ p {
   }
 }
 
+code,
+kbd,
+pre,
+samp {
+  font-family: var(--font-mono);
+}
+
 @font-face {
   font-family: 'Iconfont 0';
   src: url('../fonts/IconFont-Regular-0.9.3.woff2') format('woff2');
   font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Dollypro';
-  src: url('../fonts/DollyPro-Regular.woff') format('woff');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Dollypro';
-  src: url('../fonts/DollyPro-RegularItalic.woff') format('woff');
-  font-weight: 400;
-  font-style: italic;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Sabon';
-  src: url('../fonts/Sabon-SemiBoldItalic.woff') format('woff');
-  font-weight: 600;
-  font-style: italic;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Dollypro';
-  src: url('../fonts/DollyPro-Bold.woff') format('woff');
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Sabon';
-  src: url('../fonts/Sabon.woff') format('woff');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Sabon';
-  src: url('../fonts/Sabon-Italic.woff') format('woff');
-  font-weight: 400;
-  font-style: italic;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Sabon';
-  src: url('../fonts/Sabon-SemiBold.woff') format('woff');
-  font-weight: 600;
   font-style: normal;
   font-display: swap;
 }

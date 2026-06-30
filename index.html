@@ -1,120 +1,368 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  
-  <title>Adam Simms - Technologist, Designer, Artist, and Educator</title>
-  <meta name="description" content="Adam Simms is a technologist, designer, educator, and artist based in Montreal. Former design leader at Trello, Atlassian, Lightspeed, and Age of Union.">
-  <meta name="robots" content="index,follow">
-  <meta name="author" content="Adam Simms">
-  <meta name="theme-color" content="#ff4f00">
-  
-  <!-- Open Graph Meta Tags -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://adamsimms.xyz/">
-  <meta property="og:title" content="Adam Simms - Technologist, Designer, Artist, and Educator">
-  <meta property="og:description" content="Adam Simms is a technologist, designer, educator, and artist based in Montreal. Former design leader at Trello, Atlassian, Lightspeed, and Age of Union.">
-  <meta property="og:image" content="https://adamsimms.xyz/img/webclip.png">
-  <meta property="og:site_name" content="Adam Simms">
-  <meta property="og:locale" content="en_US">
-  
-  <!-- Twitter Card Meta Tags -->
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:site" content="@adamsimms">
-  <meta name="twitter:creator" content="@adamsimms">
-  <meta name="twitter:title" content="Adam Simms - Technologist, Designer, Artist, and Educator">
-  <meta name="twitter:description" content="Adam Simms is a technologist, designer, educator, and artist based in Montreal. Former design leader at Trello, Atlassian, Lightspeed, and Age of Union.">
-  <meta name="twitter:image" content="https://adamsimms.xyz/img/webclip.png">
-  
-  <!-- Stylesheets -->
-  <link href="css/normalize.css" rel="stylesheet">
-  <link href="css/styles.css" rel="stylesheet">
-  
-  <!-- Font Preloading -->
-  <link rel="preload" href="/fonts/IconFont-Regular-0.9.3.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="/fonts/Sabon.woff" as="font" type="font/woff" crossorigin>
-  <link rel="preload" href="/fonts/DollyPro-Regular.woff" as="font" type="font/woff" crossorigin>
-  
-  <!-- Icons -->
-  <link href="img/favicon.ico" rel="shortcut icon" type="image/x-icon">
-  <link href="img/webclip.png" rel="apple-touch-icon">
-  <link rel="apple-touch-icon" sizes="256x256" href="img/webclip.png">
-  
-  <!-- Structured Data (JSON-LD) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Adam Simms",
-    "url": "https://adamsimms.xyz",
-    "image": "https://adamsimms.xyz/img/webclip.png",
-    "sameAs": [
-      "https://www.linkedin.com/in/adamsimms",
-      "https://instagram.com/adamsimms",
-      "https://github.com/adamsimms",
-      "https://www.concordia.ca/faculty/adam-simms.html",
-      "https://adamsim.ms/"
-    ],
-    "jobTitle": "Technologist, Designer, Artist, and Educator",
-    "worksFor": {
-      "@type": "Organization",
-      "name": "RECESS"
-    },
-    "alumniOf": [
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <title>Adam Simms - Technologist, Designer, Artist, and Educator</title>
+    <meta
+      name="description"
+      content="Adam Simms is a technologist, designer, educator, and artist based in Montreal. Former design leader at Trello, Atlassian, Lightspeed, and Age of Union."
+    />
+    <meta name="robots" content="index,follow" />
+    <meta name="author" content="Adam Simms" />
+    <meta name="theme-color" content="#ff4f00" />
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://adamsimms.xyz/" />
+    <meta property="og:title" content="Adam Simms - Technologist, Designer, Artist, and Educator" />
+    <meta
+      property="og:description"
+      content="Adam Simms is a technologist, designer, educator, and artist based in Montreal. Former design leader at Trello, Atlassian, Lightspeed, and Age of Union."
+    />
+    <meta property="og:image" content="https://adamsimms.xyz/img/webclip.png" />
+    <meta property="og:site_name" content="Adam Simms" />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@adamsimms" />
+    <meta name="twitter:creator" content="@adamsimms" />
+    <meta
+      name="twitter:title"
+      content="Adam Simms - Technologist, Designer, Artist, and Educator"
+    />
+    <meta
+      name="twitter:description"
+      content="Adam Simms is a technologist, designer, educator, and artist based in Montreal. Former design leader at Trello, Atlassian, Lightspeed, and Age of Union."
+    />
+    <meta name="twitter:image" content="https://adamsimms.xyz/img/webclip.png" />
+
+    <!-- CRITICAL_CSS -->
+    <style>
+      html{line-height:1.15;-webkit-text-size-adjust:100%;}body{margin:0;}h1{font-size:2em;margin:0.67em 0;}:root{--color-primary:#ff4f00;--color-text:#000;--color-background:#fff;--font-heading:'Outfit',sans-serif;--font-body:'Inter',sans-serif;--font-sans:'Inter',sans-serif;--font-mono:'JetBrains Mono',monospace;--font-icon:'Iconfont 0',sans-serif;--spacing-small:4px;--spacing-medium:20px;--spacing-large:40px;--spacing-xlarge:60px;--spacing-xxlarge:80px;}.skip-navigation{position:absolute;top:-40px;left:0;background:var(--color-primary);color:var(--color-background);padding:8px;text-decoration:none;z-index:100;}.skip-navigation:focus{top:0;}p{margin-bottom:var(--spacing-medium);font-size:18px;line-height:24px;}.body{margin-left:0;font-family:var(--font-body);}.container{position:absolute;left:var(--spacing-xxlarge);display:block;max-width:30%;margin:var(--spacing-xlarge) auto 0;padding:0;font-family:var(--font-body);}.container--timeline{max-width:28rem;}.experiment-note{margin-top:var(--spacing-medium);}.heading{margin-bottom:var(--spacing-small);font-family:var(--font-heading);font-size:42px;font-weight:600;}.orange-text{color:var(--color-primary);}.paragraph{margin-bottom:var(--spacing-large);font-family:var(--font-body);font-size:22px;line-height:28px;font-weight:400;}.timeline-item{margin-bottom:var(--spacing-medium);}.timeline-item:last-child{margin-bottom:0;}.timeline-courses .timeline-item{margin-bottom:12px;}.lightning-bolt{margin-bottom:30px;margin-left:-8px;font-family:var(--font-icon);font-size:36px;}@media screen and (max-width:991px){.container{max-width:60%;}.container--timeline{max-width:24rem;}@media screen and (max-width:767px){.container{left:var(--spacing-xlarge);max-width:80%;}.container--timeline{max-width:none;width:calc(100% - var(--spacing-xlarge) * 2);}@media screen and (max-width:479px){.body{margin-right:auto;margin-left:auto;}.container{left:7px;max-width:90%;margin-right:auto;margin-left:auto;padding-left:var(--spacing-medium);}.heading{font-size:32px;line-height:34px;}.paragraph{margin-bottom:24px;font-size:18px;line-height:26px;}pre,samp{font-family:var(--font-mono);}
+    </style>
+    <!-- /CRITICAL_CSS -->
+
+    <!-- Stylesheets -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="css/normalize.css" rel="stylesheet" />
+    <link
+      href="css/styles.css"
+      rel="preload"
+      as="style"
+      onload="
+        this.onload = null;
+        this.rel = 'stylesheet';
+      "
+    />
+    <noscript><link href="css/styles.css" rel="stylesheet" /></noscript>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Preloading -->
+    <link
+      rel="preload"
+      href="/fonts/IconFont-Regular-0.9.3.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+
+    <!-- Icons -->
+    <link href="img/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link href="img/webclip.png" rel="apple-touch-icon" />
+    <link rel="apple-touch-icon" sizes="256x256" href="img/webclip.png" />
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
       {
-        "@type": "CollegeOrUniversity",
-        "name": "Concordia University",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Montreal",
-          "addressCountry": "CA"
-        }
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Adam Simms",
+        "url": "https://adamsimms.xyz",
+        "image": "https://adamsimms.xyz/img/webclip.png",
+        "sameAs": [
+          "https://www.linkedin.com/in/adamsimms",
+          "https://instagram.com/adamsimms",
+          "https://github.com/adamsimms",
+          "https://www.concordia.ca/faculty/adam-simms.html",
+          "https://adamsim.ms/"
+        ],
+        "jobTitle": "Technologist, Designer, Artist, and Educator",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "RECESS"
+        },
+        "alumniOf": [
+          {
+            "@type": "CollegeOrUniversity",
+            "name": "Concordia University",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Montreal",
+              "addressCountry": "CA"
+            }
+          }
+        ],
+        "knowsAbout": ["Technology", "Design", "Art", "Education", "Photography", "New Media"],
+        "description": "Adam Simms is a technologist, designer, educator, and artist based in Montreal. Former design leader at Trello, Atlassian, Lightspeed, and Age of Union."
       }
-    ],
-    "knowsAbout": ["Technology", "Design", "Art", "Education", "Photography", "New Media"],
-    "description": "Adam Simms is a technologist, designer, educator, and artist based in Montreal. Former design leader at Trello, Atlassian, Lightspeed, and Age of Union."
-  }
-  </script>
-</head>
-<body class="body">
-  <!-- Skip Navigation Link -->
-  <a href="#main-content" class="skip-navigation" aria-label="Skip to main content">Skip to main content</a>
-  
-  <div class="container">
-    <header class="intro">
-      <div class="lightning-bolt" aria-hidden="true"><span>︎</span></div>
-      <h1 class="heading"><span class="orange-text"><strong>Adam Simms</strong></span></h1>
-      <p class="paragraph"><em>Technologist, designer, artist, and educator</em></p>
-    </header>
-    
-    <main id="main-content" class="about">
-      <section>
-        <p class="paragraph">I lead, mentor, and implement technology visions, transform strategy into prototypes, and build delightful experiences.</p>
-        <p class="paragraph">I've worked as a design contributor, director, and leader at <a href="https://trello.com/" target="_blank" rel="noopener noreferrer" class="link" aria-label="Visit Trello">Trello</a>, <a href="https://atlassian.com/" target="_blank" rel="noopener noreferrer" class="link" aria-label="Visit Atlassian">Atlassian</a>, <a href="https://www.lightspeedhq.com/" target="_blank" rel="noopener noreferrer" class="link" aria-label="Visit Lightspeed">Lightspeed</a>, and <a href="https://ageofunion.com" target="_blank" rel="noopener noreferrer" class="link" aria-label="Visit Age of Union">Age of Union</a>.</p>
-        <p class="paragraph"><a href="https://www.concordia.ca/faculty/adam-simms.html" target="_blank" rel="noopener noreferrer" class="link" aria-label="View Adam Simms faculty profile at Concordia University">Artist-in-Residence</a> at <a href="https://www.concordia.ca/" target="_blank" rel="noopener noreferrer" class="link" aria-label="Visit Concordia University">Concordia University</a> in the <a href="https://www.concordia.ca/academics/undergraduate/photography.html" target="_blank" rel="noopener noreferrer" class="link" aria-label="Concordia Photography Program">Photography Program</a> — <a href="https://phot398.cargo.site/" target="_blank" rel="noopener noreferrer" class="link" aria-label="As Seen on Screens">As Seen on Screens: Cyberspace &amp; Image Economy</a>, <a href="https://phot331.cargo.site/" target="_blank" rel="noopener noreferrer" class="link" aria-label="Digital Photography I">Digital Photography I</a>, <a href="https://phot332.cargo.site/" target="_blank" rel="noopener noreferrer" class="link" aria-label="Digital Photography II">Digital Photography II</a>, and <a href="https://docs.google.com/document/d/1jmSfL4eJpx7KSEprGtBNSqEKv5-7IXkVlF82YIm0VL8/edit?usp=sharing" target="_blank" rel="noopener noreferrer" class="link" aria-label="Advanced Workshop in Photography">Advanced Workshop in Photography</a>.</p>
-        <p class="paragraph">I create immersive experiences that combine <a href="https://adamsim.ms/" target="_blank" rel="noopener noreferrer" class="link" aria-label="View Adam's photography work">photography</a>, <a href="https://pinchards.is/adrift/" target="_blank" rel="noopener noreferrer" class="link" aria-label="View new media project: Adrift">new media</a>, and <a href="https://pinchards.is/info.php" target="_blank" rel="noopener noreferrer" class="link" aria-label="Learn about microelectronics work">microelectronics</a> to explore the preservation of intangible culture.</p>
-        <p class="paragraph">I'm the cofounder of <a href="https://www.recessthermalstation.com/" target="_blank" rel="noopener noreferrer" class="link" aria-label="Visit RECESS website">RECESS</a>, a wellness club in Montreal.</p>
-      </section>
-    </main>
-    
-    <aside class="extra">
-      <p class="small">/ I hold an <a href="https://www.concordia.ca/finearts/studio-arts/programs/graduate/photography.html" target="_blank" rel="noopener noreferrer" class="link small" aria-label="MFA in Photography at Concordia">MFA in Photography</a> and <a href="https://www.concordia.ca/academics/undergraduate/design.html" target="_blank" rel="noopener noreferrer" class="link small" aria-label="BFA in Design at Concordia">BFA in Design</a> from <a href="https://www.concordia.ca/" target="_blank" rel="noopener noreferrer" class="link small" aria-label="Visit Concordia University">Concordia University</a>
-      </p>
-      <p class="small">/ I'm a <a href="https://postimage.hexagram.ca/research/" target="_blank" rel="noopener noreferrer" class="link small" aria-label="Post-Image Cluster research">Post-Image Cluster</a> research member within the <a href="https://milieux.concordia.ca/" target="_blank" rel="noopener noreferrer" class="link small" aria-label="Visit Milieux Institute">Milieux Institute for Arts, Culture and Technology</a>.</p>
-    </aside>
-    
-    <footer class="footer">
-      <nav aria-label="Contact and social media links">
-        <p class="footer-links">
-          <a href="https://calendar.notion.so/meet/adamsimms/1h" target="_blank" rel="noopener noreferrer" aria-label="Meet with Adam Simms">Meet</a> ·
-          <a href="https://github.com/adamsimms" target="_blank" rel="noopener noreferrer" aria-label="View Adam Simms on GitHub">GitHub</a> ·
-          <a href="https://www.linkedin.com/in/adamsimms" target="_blank" rel="noopener noreferrer" aria-label="Connect with Adam Simms on LinkedIn">LinkedIn</a> ·
-          <a href="https://instagram.com/adamsimms" target="_blank" rel="noopener noreferrer" aria-label="Follow Adam Simms on Instagram">Instagram</a>
+    </script>
+  </head>
+  <body class="body">
+    <!-- Skip Navigation Link -->
+    <a href="#main-content" class="skip-navigation" aria-label="Skip to main content"
+      >Skip to main content</a
+    >
+
+    <div class="container">
+      <header class="intro">
+        <div class="lightning-bolt" aria-hidden="true"><span>︎</span></div>
+        <h1 class="heading">
+          <span class="orange-text"><strong>Adam Simms</strong></span>
+        </h1>
+        <p class="paragraph"><em>Technologist, designer, artist, and educator</em></p>
+      </header>
+
+      <main id="main-content" class="about">
+        <section>
+          <p class="paragraph">
+            I lead, mentor, and implement technology visions, transform strategy into prototypes,
+            and build delightful experiences.
+          </p>
+          <p class="paragraph">
+            I've worked as a design contributor, director, and leader at
+            <a
+              href="https://trello.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="link"
+              aria-label="Visit Trello"
+              >Trello</a
+            >,
+            <a
+              href="https://atlassian.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="link"
+              aria-label="Visit Atlassian"
+              >Atlassian</a
+            >,
+            <a
+              href="https://www.lightspeedhq.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="link"
+              aria-label="Visit Lightspeed"
+              >Lightspeed</a
+            >, and
+            <a
+              href="https://ageofunion.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="link"
+              aria-label="Visit Age of Union"
+              >Age of Union</a
+            >.
+          </p>
+          <p class="paragraph">
+            <a
+              href="https://www.concordia.ca/faculty/adam-simms.html"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="link"
+              aria-label="View Adam Simms faculty profile at Concordia University"
+              >Artist-in-Residence</a
+            >
+            at
+            <a
+              href="https://www.concordia.ca/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="link"
+              aria-label="Visit Concordia University"
+              >Concordia University</a
+            >
+            in the
+            <a
+              href="https://www.concordia.ca/academics/undergraduate/photography.html"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="link"
+              aria-label="Concordia Photography Program"
+              >Photography Program</a
+            >
+            —
+            <a
+              href="https://phot398.cargo.site/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="link"
+              aria-label="As Seen on Screens"
+              >As Seen on Screens: Cyberspace &amp; Image Economy</a
+            >,
+            <a
+              href="https://phot331.cargo.site/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="link"
+              aria-label="Digital Photography I"
+              >Digital Photography I</a
+            >,
+            <a
+              href="https://phot332.cargo.site/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="link"
+              aria-label="Digital Photography II"
+              >Digital Photography II</a
+            >, and
+            <a
+              href="https://docs.google.com/document/d/1jmSfL4eJpx7KSEprGtBNSqEKv5-7IXkVlF82YIm0VL8/edit?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="link"
+              aria-label="Advanced Workshop in Photography"
+              >Advanced Workshop in Photography</a
+            >.
+          </p>
+          <p class="paragraph">
+            I create immersive experiences that combine
+            <a
+              href="https://adamsim.ms/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="link"
+              aria-label="View Adam's photography work"
+              >photography</a
+            >,
+            <a
+              href="https://pinchards.is/adrift/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="link"
+              aria-label="View new media project: Adrift"
+              >new media</a
+            >, and
+            <a
+              href="https://pinchards.is/info.php"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="link"
+              aria-label="Learn about microelectronics work"
+              >microelectronics</a
+            >
+            to explore the preservation of intangible culture.
+          </p>
+          <p class="paragraph">
+            I'm the cofounder of
+            <a
+              href="https://www.recessthermalstation.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="link"
+              aria-label="Visit RECESS website"
+              >RECESS</a
+            >, a wellness club in Montreal.
+          </p>
+        </section>
+      </main>
+
+      <aside class="extra">
+        <p class="small">
+          / I hold an
+          <a
+            href="https://www.concordia.ca/finearts/studio-arts/programs/graduate/photography.html"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="link small"
+            aria-label="MFA in Photography at Concordia"
+            >MFA in Photography</a
+          >
+          and
+          <a
+            href="https://www.concordia.ca/academics/undergraduate/design.html"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="link small"
+            aria-label="BFA in Design at Concordia"
+            >BFA in Design</a
+          >
+          from
+          <a
+            href="https://www.concordia.ca/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="link small"
+            aria-label="Visit Concordia University"
+            >Concordia University</a
+          >
         </p>
-      </nav>
-    </footer>
-  </div>
-</body>
+        <p class="small">
+          / I'm a
+          <a
+            href="https://postimage.hexagram.ca/research/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="link small"
+            aria-label="Post-Image Cluster research"
+            >Post-Image Cluster</a
+          >
+          research member within the
+          <a
+            href="https://milieux.concordia.ca/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="link small"
+            aria-label="Visit Milieux Institute"
+            >Milieux Institute for Arts, Culture and Technology</a
+          >.
+        </p>
+      </aside>
+
+      <footer class="footer">
+        <nav aria-label="Contact and social media links">
+          <p class="footer-links">
+            <a
+              href="https://calendar.notion.so/meet/adamsimms/1h"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Meet with Adam Simms"
+              >Meet</a
+            >
+            ·
+            <a
+              href="https://github.com/adamsimms"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="View Adam Simms on GitHub"
+              >GitHub</a
+            >
+            ·
+            <a
+              href="https://www.linkedin.com/in/adamsimms"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Connect with Adam Simms on LinkedIn"
+              >LinkedIn</a
+            >
+            ·
+            <a
+              href="https://instagram.com/adamsimms"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Follow Adam Simms on Instagram"
+              >Instagram</a
+            >
+          </p>
+        </nav>
+      </footer>
+    </div>
+  </body>
 </html>

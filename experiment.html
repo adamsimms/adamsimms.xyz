@@ -1,132 +1,331 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  
-  <title>Timeline layout experiment | Adam Simms</title>
-  <meta name="description" content="Structured timeline layout experiment for adamsimms.xyz.">
-  <meta name="robots" content="noindex,nofollow">
-  <meta name="author" content="Adam Simms">
-  <meta name="theme-color" content="#ff4f00">
-  
-  <!-- Stylesheets -->
-  <link href="css/normalize.css" rel="stylesheet">
-  <link href="css/styles.css" rel="stylesheet">
-  
-  <!-- Font Preloading -->
-  <link rel="preload" href="/fonts/IconFont-Regular-0.9.3.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="/fonts/Sabon.woff" as="font" type="font/woff" crossorigin>
-  <link rel="preload" href="/fonts/DollyPro-Regular.woff" as="font" type="font/woff" crossorigin>
-  
-  <!-- Icons -->
-  <link href="img/favicon.ico" rel="shortcut icon" type="image/x-icon">
-  <link href="img/webclip.png" rel="apple-touch-icon">
-</head>
-<body class="body">
-  <a href="#main-content" class="skip-navigation" aria-label="Skip to main content">Skip to main content</a>
-  
-  <div class="container container--timeline">
-    <header class="intro">
-      <div class="lightning-bolt" aria-hidden="true"><span>︎</span></div>
-      <h1 class="heading"><span class="orange-text"><strong>Adam Simms</strong></span></h1>
-      <p class="paragraph"><em>Technologist, designer, artist, and educator</em></p>
-      <p class="small experiment-note">Layout experiment · <a href="/" class="link small">Back to main site</a></p>
-    </header>
-    
-    <main id="main-content" class="about">
-      <p class="paragraph">I lead, mentor, and implement technology visions, transform strategy into prototypes, and build delightful experiences.</p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-      <section class="section" aria-labelledby="experience-heading">
-        <h2 class="section-heading" id="experience-heading">Experience</h2>
-        <ol class="timeline">
-          <li class="timeline-item">
-            <p class="timeline-title">Co-Founder · <a href="https://www.recessthermalstation.com/" target="_blank" rel="noopener noreferrer" class="link">RECESS</a></p>
-            <p class="timeline-date">Oct 2024 – Present</p>
-          </li>
-          <li class="timeline-item">
-            <p class="timeline-title">Head of Technology · <a href="https://ageofunion.com/" target="_blank" rel="noopener noreferrer" class="link">Age of Union</a></p>
-            <p class="timeline-date">Nov 2021 – Jun 2023</p>
-          </li>
-          <li class="timeline-item">
-            <p class="timeline-title">Head of Design · <a href="https://www.lightspeedhq.com/" target="_blank" rel="noopener noreferrer" class="link">Lightspeed</a></p>
-            <p class="timeline-date">Nov 2018 – Nov 2019</p>
-          </li>
-          <li class="timeline-item">
-            <p class="timeline-title">Product Design, Trello · <a href="https://atlassian.com/" target="_blank" rel="noopener noreferrer" class="link">Atlassian</a></p>
-            <p class="timeline-date">Feb 2017 – Oct 2018</p>
-          </li>
-          <li class="timeline-item">
-            <p class="timeline-title">Product Design · <a href="https://trello.com/" target="_blank" rel="noopener noreferrer" class="link">Trello</a></p>
-            <p class="timeline-date">Sep 2013 – Feb 2017</p>
-          </li>
-        </ol>
-      </section>
+    <title>Timeline layout experiment | Adam Simms</title>
+    <meta name="description" content="Structured timeline layout experiment for adamsimms.xyz." />
+    <meta name="robots" content="noindex,nofollow" />
+    <meta name="author" content="Adam Simms" />
+    <meta name="theme-color" content="#ff4f00" />
 
-      <section class="section" aria-labelledby="teaching-heading">
-        <h2 class="section-heading" id="teaching-heading">Teaching</h2>
-        <ol class="timeline">
-          <li class="timeline-item">
-            <p class="timeline-title">Artist in Residence · <a href="https://www.concordia.ca/faculty/adam-simms.html" target="_blank" rel="noopener noreferrer" class="link">Concordia University</a></p>
-            <p class="timeline-date">2024 – 2025</p>
-          </li>
-          <li class="timeline-item">
-            <p class="timeline-title">Artist in Residence · <a href="https://www.concordia.ca/faculty/adam-simms.html" target="_blank" rel="noopener noreferrer" class="link">Concordia University</a></p>
-            <p class="timeline-date">2021 – 2022</p>
-          </li>
-        </ol>
-        <ol class="timeline timeline-courses">
-          <li class="timeline-item">
-            <p class="timeline-title"><span class="course-code">PHOT 398</span> · <a href="https://phot398.cargo.site/" target="_blank" rel="noopener noreferrer" class="link">As Seen on Screens: Cyberspace &amp; Image Economy</a></p>
-          </li>
-          <li class="timeline-item">
-            <p class="timeline-title"><span class="course-code">PHOT 300</span> · Photographic Vision: Theory &amp; Practice II</p>
-          </li>
-          <li class="timeline-item">
-            <p class="timeline-title"><span class="course-code">PHOT 331</span> · <a href="https://phot331.cargo.site/" target="_blank" rel="noopener noreferrer" class="link">Digital Photography I</a></p>
-          </li>
-          <li class="timeline-item">
-            <p class="timeline-title"><span class="course-code">PHOT 332</span> · <a href="https://phot332.cargo.site/" target="_blank" rel="noopener noreferrer" class="link">Digital Photography II</a></p>
-          </li>
-          <li class="timeline-item">
-            <p class="timeline-title"><span class="course-code">PHOT 400</span> · <a href="https://docs.google.com/document/d/1jmSfL4eJpx7KSEprGtBNSqEKv5-7IXkVlF82YIm0VL8/edit?usp=sharing" target="_blank" rel="noopener noreferrer" class="link">Advanced Workshop in Photography</a></p>
-          </li>
-        </ol>
-      </section>
+    <!-- Stylesheets -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="css/normalize.css" rel="stylesheet" />
+    <link href="css/styles.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
 
-      <section class="section" aria-labelledby="work-heading">
-        <h2 class="section-heading" id="work-heading">Work</h2>
-        <ol class="timeline">
-          <li class="timeline-item">
-            <p class="timeline-title"><a href="https://adamsim.ms/" target="_blank" rel="noopener noreferrer" class="link">adamsim.ms</a> · Photography</p>
-          </li>
-          <li class="timeline-item">
-            <p class="timeline-title"><a href="https://pinchards.is/" target="_blank" rel="noopener noreferrer" class="link">pinchards.is</a> · New media &amp; microelectronics</p>
-          </li>
-          <li class="timeline-item">
-            <p class="timeline-title"><a href="https://pinchards.is/adrift/" target="_blank" rel="noopener noreferrer" class="link">Adrift</a> · Immersive new media</p>
-          </li>
-        </ol>
-      </section>
-    </main>
-    
-    <aside class="extra">
-      <p class="small">/ I hold an <a href="https://www.concordia.ca/finearts/studio-arts/programs/graduate/photography.html" target="_blank" rel="noopener noreferrer" class="link small">MFA in Photography</a> and <a href="https://www.concordia.ca/academics/undergraduate/design.html" target="_blank" rel="noopener noreferrer" class="link small">BFA in Design</a> from <a href="https://www.concordia.ca/" target="_blank" rel="noopener noreferrer" class="link small">Concordia University</a></p>
-      <p class="small">/ I'm a <a href="https://postimage.hexagram.ca/research/" target="_blank" rel="noopener noreferrer" class="link small">Post-Image Cluster</a> research member within the <a href="https://milieux.concordia.ca/" target="_blank" rel="noopener noreferrer" class="link small">Milieux Institute for Arts, Culture and Technology</a>.</p>
-    </aside>
-    
-    <footer class="footer">
-      <nav aria-label="Contact and social media links">
-        <p class="footer-links">
-          <a href="/">Home</a> ·
-          <a href="https://calendar.notion.so/meet/adamsimms/1h" target="_blank" rel="noopener noreferrer">Meet</a> ·
-          <a href="https://github.com/adamsimms" target="_blank" rel="noopener noreferrer">GitHub</a> ·
-          <a href="https://www.linkedin.com/in/adamsimms" target="_blank" rel="noopener noreferrer">LinkedIn</a> ·
-          <a href="https://instagram.com/adamsimms" target="_blank" rel="noopener noreferrer">Instagram</a>
+    <!-- Font Preloading -->
+    <link
+      rel="preload"
+      href="/fonts/IconFont-Regular-0.9.3.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+
+    <!-- Icons -->
+    <link href="img/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link href="img/webclip.png" rel="apple-touch-icon" />
+  </head>
+  <body class="body">
+    <a href="#main-content" class="skip-navigation" aria-label="Skip to main content"
+      >Skip to main content</a
+    >
+
+    <div class="container container--timeline">
+      <header class="intro">
+        <div class="lightning-bolt" aria-hidden="true"><span>︎</span></div>
+        <h1 class="heading">
+          <span class="orange-text"><strong>Adam Simms</strong></span>
+        </h1>
+        <p class="paragraph"><em>Technologist, designer, artist, and educator</em></p>
+        <p class="small experiment-note">
+          Layout experiment · <a href="/" class="link small">Back to main site</a>
         </p>
-      </nav>
-    </footer>
-  </div>
-</body>
+      </header>
+
+      <main id="main-content" class="about">
+        <p class="paragraph">
+          I lead, mentor, and implement technology visions, transform strategy into prototypes, and
+          build delightful experiences.
+        </p>
+
+        <section class="section" aria-labelledby="experience-heading">
+          <h2 class="section-heading" id="experience-heading">Experience</h2>
+          <ol class="timeline">
+            <li class="timeline-item">
+              <p class="timeline-title">
+                Co-Founder ·
+                <a
+                  href="https://www.recessthermalstation.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="link"
+                  >RECESS</a
+                >
+              </p>
+              <p class="timeline-date">Oct 2024 – Present</p>
+            </li>
+            <li class="timeline-item">
+              <p class="timeline-title">
+                Head of Technology ·
+                <a
+                  href="https://ageofunion.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="link"
+                  >Age of Union</a
+                >
+              </p>
+              <p class="timeline-date">Nov 2021 – Jun 2023</p>
+            </li>
+            <li class="timeline-item">
+              <p class="timeline-title">
+                Head of Design ·
+                <a
+                  href="https://www.lightspeedhq.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="link"
+                  >Lightspeed</a
+                >
+              </p>
+              <p class="timeline-date">Nov 2018 – Nov 2019</p>
+            </li>
+            <li class="timeline-item">
+              <p class="timeline-title">
+                Product Design, Trello ·
+                <a
+                  href="https://atlassian.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="link"
+                  >Atlassian</a
+                >
+              </p>
+              <p class="timeline-date">Feb 2017 – Oct 2018</p>
+            </li>
+            <li class="timeline-item">
+              <p class="timeline-title">
+                Product Design ·
+                <a href="https://trello.com/" target="_blank" rel="noopener noreferrer" class="link"
+                  >Trello</a
+                >
+              </p>
+              <p class="timeline-date">Sep 2013 – Feb 2017</p>
+            </li>
+          </ol>
+        </section>
+
+        <section class="section" aria-labelledby="teaching-heading">
+          <h2 class="section-heading" id="teaching-heading">Teaching</h2>
+          <ol class="timeline">
+            <li class="timeline-item">
+              <p class="timeline-title">
+                Artist in Residence ·
+                <a
+                  href="https://www.concordia.ca/faculty/adam-simms.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="link"
+                  >Concordia University</a
+                >
+              </p>
+              <p class="timeline-date">2024 – 2025</p>
+            </li>
+            <li class="timeline-item">
+              <p class="timeline-title">
+                Artist in Residence ·
+                <a
+                  href="https://www.concordia.ca/faculty/adam-simms.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="link"
+                  >Concordia University</a
+                >
+              </p>
+              <p class="timeline-date">2021 – 2022</p>
+            </li>
+          </ol>
+          <ol class="timeline timeline-courses">
+            <li class="timeline-item">
+              <p class="timeline-title">
+                <span class="course-code">PHOT 398</span> ·
+                <a
+                  href="https://phot398.cargo.site/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="link"
+                  >As Seen on Screens: Cyberspace &amp; Image Economy</a
+                >
+              </p>
+            </li>
+            <li class="timeline-item">
+              <p class="timeline-title">
+                <span class="course-code">PHOT 300</span> · Photographic Vision: Theory &amp;
+                Practice II
+              </p>
+            </li>
+            <li class="timeline-item">
+              <p class="timeline-title">
+                <span class="course-code">PHOT 331</span> ·
+                <a
+                  href="https://phot331.cargo.site/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="link"
+                  >Digital Photography I</a
+                >
+              </p>
+            </li>
+            <li class="timeline-item">
+              <p class="timeline-title">
+                <span class="course-code">PHOT 332</span> ·
+                <a
+                  href="https://phot332.cargo.site/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="link"
+                  >Digital Photography II</a
+                >
+              </p>
+            </li>
+            <li class="timeline-item">
+              <p class="timeline-title">
+                <span class="course-code">PHOT 400</span> ·
+                <a
+                  href="https://docs.google.com/document/d/1jmSfL4eJpx7KSEprGtBNSqEKv5-7IXkVlF82YIm0VL8/edit?usp=sharing"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="link"
+                  >Advanced Workshop in Photography</a
+                >
+              </p>
+            </li>
+          </ol>
+        </section>
+
+        <section class="section" aria-labelledby="work-heading">
+          <h2 class="section-heading" id="work-heading">Work</h2>
+          <ol class="timeline">
+            <li class="timeline-item">
+              <p class="timeline-title">
+                <a href="https://adamsim.ms/" target="_blank" rel="noopener noreferrer" class="link"
+                  >adamsim.ms</a
+                >
+                · Photography
+              </p>
+            </li>
+            <li class="timeline-item">
+              <p class="timeline-title">
+                <a
+                  href="https://pinchards.is/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="link"
+                  >pinchards.is</a
+                >
+                · New media &amp; microelectronics
+              </p>
+            </li>
+            <li class="timeline-item">
+              <p class="timeline-title">
+                <a
+                  href="https://pinchards.is/adrift/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="link"
+                  >Adrift</a
+                >
+                · Immersive new media
+              </p>
+            </li>
+          </ol>
+        </section>
+      </main>
+
+      <aside class="extra">
+        <p class="small">
+          / I hold an
+          <a
+            href="https://www.concordia.ca/finearts/studio-arts/programs/graduate/photography.html"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="link small"
+            >MFA in Photography</a
+          >
+          and
+          <a
+            href="https://www.concordia.ca/academics/undergraduate/design.html"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="link small"
+            >BFA in Design</a
+          >
+          from
+          <a
+            href="https://www.concordia.ca/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="link small"
+            >Concordia University</a
+          >
+        </p>
+        <p class="small">
+          / I'm a
+          <a
+            href="https://postimage.hexagram.ca/research/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="link small"
+            >Post-Image Cluster</a
+          >
+          research member within the
+          <a
+            href="https://milieux.concordia.ca/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="link small"
+            >Milieux Institute for Arts, Culture and Technology</a
+          >.
+        </p>
+      </aside>
+
+      <footer class="footer">
+        <nav aria-label="Contact and social media links">
+          <p class="footer-links">
+            <a href="/">Home</a> ·
+            <a
+              href="https://calendar.notion.so/meet/adamsimms/1h"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Meet</a
+            >
+            ·
+            <a href="https://github.com/adamsimms" target="_blank" rel="noopener noreferrer"
+              >GitHub</a
+            >
+            ·
+            <a
+              href="https://www.linkedin.com/in/adamsimms"
+              target="_blank"
+              rel="noopener noreferrer"
+              >LinkedIn</a
+            >
+            ·
+            <a href="https://instagram.com/adamsimms" target="_blank" rel="noopener noreferrer"
+              >Instagram</a
+            >
+          </p>
+        </nav>
+      </footer>
+    </div>
+  </body>
 </html>
