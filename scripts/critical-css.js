@@ -40,7 +40,6 @@ const criticalSelectors = [
   '.intro-tagline',
   '.heading',
   '.paragraph',
-  '.lightning-bolt',
   '.skip-navigation',
   'header',
   'h1',

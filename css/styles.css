@@ -7,7 +7,6 @@
   --font-body: 'Inter', sans-serif;
   --font-sans: 'Inter', sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
-  --font-icon: 'Iconfont 0', sans-serif;
 
   /* Type scale — major third (1.25), 17px body */
   --font-size-xs: 0.8125rem;
@@ -351,15 +350,6 @@ strong {
   margin-top: var(--space-4);
 }
 
-.lightning-bolt {
-  margin: 0 0 var(--space-4);
-  margin-left: -0.12em;
-  font-family: var(--font-icon);
-  font-size: 1.75rem;
-  line-height: 1;
-  letter-spacing: 0;
-}
-
 .footer {
   margin-top: var(--space-7);
 }
@@ -478,12 +468,4 @@ em {
   .timeline-courses .timeline-title {
     font-size: var(--font-size-xs);
   }
-}
-
-@font-face {
-  font-family: 'Iconfont 0';
-  src: url('../fonts/IconFont-Regular-0.9.3.woff2') format('woff2');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
 }
