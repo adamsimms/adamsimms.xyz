@@ -13,6 +13,7 @@
   --font-size-sm: 0.875rem;
   --font-size-base: 1.0625rem;
   --font-size-md: 1.1875rem;
+  --font-size-lg: 1.5rem;
   --font-size-display: clamp(2.125rem, 1.6rem + 1.75vw, 2.75rem);
   --leading-tight: 1.08;
   --leading-snug: 1.35;
@@ -130,7 +131,7 @@ strong {
 
 .container--three-col .heading {
   margin: 0;
-  font-size: var(--font-size-md);
+  font-size: var(--font-size-lg);
   font-weight: var(--weight-bold);
   line-height: var(--leading-small);
   letter-spacing: var(--tracking-caps);
