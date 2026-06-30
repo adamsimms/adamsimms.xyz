@@ -1,0 +1,3 @@
+# Image optimization targets
+# Original images should be placed here
+# Optimized variants (WebP, AVIF) will be generated during build

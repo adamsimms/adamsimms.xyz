@@ -1,5 +1,37 @@
+:root {
+  --color-primary: #ff4f00;
+  --color-text: #000;
+  --color-background: #fff;
+  --font-heading: Sabon, serif;
+  --font-body: Dollypro, serif;
+  --font-sans: 'Droid Sans', sans-serif;
+  --font-serif: 'Droid Serif', serif;
+  --font-icon: 'Iconfont 0', sans-serif;
+  --spacing-small: 4px;
+  --spacing-medium: 20px;
+  --spacing-large: 40px;
+  --spacing-xlarge: 60px;
+  --spacing-xxlarge: 80px;
+}
+
+/* Skip Navigation for Accessibility */
+.skip-navigation {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--color-primary);
+  color: var(--color-background);
+  padding: 8px;
+  text-decoration: none;
+  z-index: 100;
+}
+
+.skip-navigation:focus {
+  top: 0;
+}
+
 p {
-  margin-bottom: 20px;
+  margin-bottom: var(--spacing-medium);
   font-size: 18px;
   line-height: 24px;
 }
@@ -10,27 +42,27 @@ p {
 
 .container {
   position: absolute;
-  left: 80px;
+  left: var(--spacing-xxlarge);
   display: block;
   max-width: 30%;
-  margin: 60px auto 0;
+  margin: var(--spacing-xlarge) auto 0;
   padding: 0;
-  font-family: 'Droid Serif', serif;
+  font-family: var(--font-serif);
 }
 
 .heading {
-  margin-bottom: 4px;
-  font-family: Sabon, serif;
+  margin-bottom: var(--spacing-small);
+  font-family: var(--font-heading);
   font-size: 42px;
   font-weight: 600;
 }
 
 .orange-text {
-  color: #ff4f00;
+  color: var(--color-primary);
 }
 
 .link {
-  color: #ff4f00;
+  color: var(--color-primary);
   font-size: 22px;
   font-weight: 400;
 }
@@ -40,15 +72,15 @@ p {
 }
 
 .paragraph {
-  margin-bottom: 40px;
-  font-family: Dollypro, serif;
+  margin-bottom: var(--spacing-large);
+  font-family: var(--font-body);
   font-size: 22px;
   line-height: 28px;
   font-weight: 400;
 }
 
 .small {
-  font-family: 'Droid Sans', sans-serif;
+  font-family: var(--font-sans);
   font-size: 14px;
   line-height: 18px;
 }
@@ -56,13 +88,13 @@ p {
 .lightning-bolt {
   margin-bottom: 30px;
   margin-left: -8px;
-  font-family: 'Iconfont 0', sans-serif;
+  font-family: var(--font-icon);
   font-size: 36px;
 }
 
 .icon {
-  font-family: 'Iconfont 0', sans-serif;
-  color: #000;
+  font-family: var(--font-icon);
+  color: var(--color-text);
   font-size: 14px;
 }
 
@@ -75,9 +107,9 @@ p {
 }
 
 .footer.link {
-  margin-bottom: 80px;
-  font-family: 'Droid Sans', sans-serif;
-  color: #000;
+  margin-bottom: var(--spacing-xxlarge);
+  font-family: var(--font-sans);
+  color: var(--color-text);
   font-size: 14px;
   font-weight: 400;
   text-decoration: none;
@@ -91,7 +123,7 @@ p {
 
 @media screen and (max-width: 767px) {
   .container {
-    left: 60px;
+    left: var(--spacing-xlarge);
     max-width: 80%;
   }
 }
@@ -107,7 +139,7 @@ p {
     max-width: 90%;
     margin-right: auto;
     margin-left: auto;
-    padding-left: 20px;
+    padding-left: var(--spacing-medium);
   }
 
   .heading {

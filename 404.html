@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  <title>404 - Page Not Found | Adam Simms</title>
+  <meta name="description" content="The page you're looking for doesn't exist.">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="theme-color" content="#ff4f00">
+  
+  <!-- Stylesheets -->
+  <link href="css/normalize.css" rel="stylesheet">
+  <link href="css/webflow.css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet">
+  
+  <!-- Font Preloading -->
+  <link rel="preload" href="/fonts/IconFont-Regular-0.9.3.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/Sabon.woff" as="font" type="font/woff" crossorigin>
+  <link rel="preload" href="/fonts/DollyPro-Regular.woff" as="font" type="font/woff" crossorigin>
+  
+  <!-- Web Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Droid+Sans:wght@400;700&family=Droid+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  
+  <!-- Icons -->
+  <link href="img/favicon.ico" rel="shortcut icon" type="image/x-icon">
+  <link href="img/webclip.png" rel="apple-touch-icon">
+  
+  <style>
+    .error-code {
+      font-size: 120px;
+      line-height: 1;
+      margin-bottom: 20px;
+      font-family: var(--font-heading);
+      color: var(--color-primary);
+      font-weight: 600;
+    }
+    
+    .error-message {
+      font-size: 32px;
+      margin-bottom: 30px;
+      font-family: var(--font-heading);
+    }
+    
+    .error-description {
+      margin-bottom: 40px;
+      max-width: 500px;
+    }
+    
+    .home-button {
+      display: inline-block;
+      padding: 15px 30px;
+      background-color: var(--color-primary);
+      color: var(--color-background);
+      text-decoration: none;
+      border-radius: 4px;
+      font-family: var(--font-sans);
+      font-weight: 700;
+      transition: background-color 0.3s ease;
+    }
+    
+    .home-button:hover {
+      background-color: #e64500;
+    }
+    
+    .error-container {
+      text-align: center;
+      min-height: 80vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    @media screen and (max-width: 479px) {
+      .error-code {
+        font-size: 80px;
+      }
+      
+      .error-message {
+        font-size: 24px;
+      }
+    }
+  </style>
+</head>
+<body class="body">
+  <div class="container w-container">
+    <div class="error-container">
+      <div class="error-code" role="heading" aria-level="1">404</div>
+      <h1 class="error-message">Page Not Found</h1>
+      <p class="paragraph error-description">
+        The page you're looking for doesn't exist or has been moved.
+        Let's get you back on track.
+      </p>
+      <a href="/" class="home-button" aria-label="Return to homepage">Back to Home</a>
+      
+      <div style="margin-top: 60px;">
+        <p class="small">Looking for something specific? Here are some helpful links:</p>
+        <nav aria-label="Quick navigation links" style="margin-top: 20px;">
+          <a href="https://www.linkedin.com/in/adamsimms" target="_blank" rel="noopener noreferrer" class="link small" aria-label="Connect with Adam on LinkedIn">LinkedIn</a> · 
+          <a href="https://instagram.com/adamsimms" target="_blank" rel="noopener noreferrer" class="link small" aria-label="Follow Adam on Instagram">Instagram</a> · 
+          <a href="https://booking.akiflow.com/adamsimms" target="_blank" rel="noopener noreferrer" class="link small" aria-label="Schedule a meeting with Adam">Meet with me</a>
+        </nav>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

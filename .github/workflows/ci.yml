@@ -1,0 +1,135 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  lint-and-validate:
+    name: Lint and Validate
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20'
+        cache: 'npm'
+        
+    - name: Install dependencies
+      run: npm ci
+      
+    - name: Run HTML linting
+      run: npm run lint:html
+      
+    - name: Run CSS linting
+      run: npm run lint:css
+      
+    - name: Run JavaScript linting
+      run: npm run lint:js
+      
+    - name: Validate HTML
+      run: npx html-validator --file=index.html --verbose
+      
+    - name: Check code formatting
+      run: npx prettier --check '**/*.{html,css,js,json,md}'
+
+  lighthouse:
+    name: Lighthouse CI
+    runs-on: ubuntu-latest
+    needs: lint-and-validate
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20'
+        
+    - name: Install dependencies
+      run: npm ci
+      
+    - name: Run Lighthouse CI
+      uses: treosh/lighthouse-ci-action@v11
+      with:
+        urls: |
+          https://adamsimms.xyz/
+        uploadArtifacts: true
+        temporaryPublicStorage: true
+
+  build:
+    name: Build and Optimize
+    runs-on: ubuntu-latest
+    needs: lint-and-validate
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20'
+        cache: 'npm'
+        
+    - name: Install dependencies
+      run: npm ci
+      
+    - name: Build project
+      run: npm run build
+      
+    - name: Optimize images
+      run: |
+        npx @squoosh/cli --webp auto img/*.png
+        npx @squoosh/cli --mozjpeg auto img/*.jpg || true
+      
+    - name: Upload build artifacts
+      uses: actions/upload-artifact@v4
+      with:
+        name: build-artifacts
+        path: |
+          css/*.min.css
+          img/
+
+  # GitHub Pages deployment disabled - now using Cloudflare Pages
+  # See .github/workflows/cloudflare-pages.yml for new deployment workflow
+  # 
+  # deploy:
+  #   name: Deploy to GitHub Pages
+  #   runs-on: ubuntu-latest
+  #   needs: [lint-and-validate, build]
+  #   if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+  #   
+  #   permissions:
+  #     contents: write
+  #     pages: write
+  #     id-token: write
+  #   
+  #   steps:
+  #   - name: Checkout code
+  #     uses: actions/checkout@v4
+  #     
+  #   - name: Setup Node.js
+  #     uses: actions/setup-node@v4
+  #     with:
+  #       node-version: '20'
+  #       
+  #   - name: Install dependencies
+  #     run: npm ci
+  #     
+  #   - name: Build
+  #     run: npm run build
+  #     
+  #   - name: Deploy to GitHub Pages
+  #     uses: peaceiris/actions-gh-pages@v3
+  #     with:
+  #       github_token: ${{ secrets.GITHUB_TOKEN }}
+  #       publish_dir: ./
+  #       exclude_assets: '.github,node_modules,scripts,.git*'

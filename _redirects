@@ -1,0 +1,12 @@
+# Cloudflare Pages Redirects Configuration
+
+# Redirect www to non-www (if using www subdomain)
+https://www.adamsimms.xyz/* https://adamsimms.xyz/:splat 301!
+
+# Ensure HTTPS
+http://adamsimms.xyz/* https://adamsimms.xyz/:splat 301!
+http://www.adamsimms.xyz/* https://adamsimms.xyz/:splat 301!
+
+# SPA fallback - serve index.html for all non-file requests
+# (Uncomment if you add client-side routing later)
+# /* /index.html 200

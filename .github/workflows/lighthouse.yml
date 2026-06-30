@@ -1,0 +1,31 @@
+name: Lighthouse Performance Audit
+
+on:
+  schedule:
+    # Run daily at 2 AM UTC
+    - cron: '0 2 * * *'
+  workflow_dispatch:
+
+jobs:
+  lighthouse:
+    name: Run Lighthouse Audit
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Run Lighthouse
+      uses: treosh/lighthouse-ci-action@v11
+      with:
+        urls: |
+          https://adamsimms.xyz/
+        uploadArtifacts: true
+        temporaryPublicStorage: true
+        
+    - name: Check performance scores
+      uses: treosh/lighthouse-ci-action@v11
+      with:
+        urls: https://adamsimms.xyz/
+        budgetPath: ./lighthouse-budget.json
+        uploadArtifacts: true

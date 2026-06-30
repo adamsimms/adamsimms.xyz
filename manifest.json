@@ -1,0 +1,21 @@
+{
+  "name": "Adam Simms - Portfolio",
+  "short_name": "Adam Simms",
+  "description": "Personal portfolio of Adam Simms - technologist, designer, artist, and educator",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ff4f00",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/img/webclip.png",
+      "sizes": "256x256",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["portfolio", "personal"],
+  "lang": "en-US",
+  "dir": "ltr"
+}
