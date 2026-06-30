@@ -106,19 +106,17 @@ strong {
 
 .container--three-col {
   position: relative;
-  left: auto;
-  right: auto;
+  left: var(--spacing-xxlarge);
   display: grid;
   grid-template-columns: minmax(0, var(--measure)) 14rem 9rem;
   grid-template-areas:
     'intro intro intro'
     'content aside nav';
   align-items: start;
-  justify-content: center;
   gap: var(--spacing-xlarge);
-  width: fit-content;
-  max-width: min(72rem, 100% - 2 * var(--spacing-xxlarge));
-  margin: var(--spacing-xlarge) auto var(--spacing-xxlarge);
+  width: max-content;
+  max-width: calc(100% - var(--spacing-xxlarge) * 2);
+  margin: var(--spacing-xlarge) 0 var(--spacing-xxlarge);
   padding: 0;
   box-sizing: border-box;
 }
@@ -429,6 +427,10 @@ em {
   }
 
   .container--three-col {
+    left: auto;
+    width: 100%;
+    max-width: min(var(--measure), 100% - 2 * var(--spacing-xlarge));
+    margin-inline: auto;
     grid-template-columns: 1fr;
     grid-template-areas:
       'intro'
@@ -459,6 +461,9 @@ em {
   }
 
   .container--three-col {
+    left: auto;
+    max-width: min(90%, var(--measure));
+    margin-inline: auto;
     padding: 0 var(--spacing-medium);
   }
 
