@@ -1,59 +1,16 @@
 /**
- * Service Worker for offline functionality
+ * Legacy cleanup: unregister service worker and clear caches.
+ * PWA support was removed in favor of a simpler static site.
  */
 
-const CACHE_NAME = 'adamsimms-v1';
-const urlsToCache = [
-  '/',
-  '/index.html',
-  '/css/normalize.css',
-  '/css/webflow.css',
-  '/css/styles.css',
-  '/fonts/IconFont-Regular-0.9.3.woff2',
-  '/fonts/Sabon.woff',
-  '/fonts/DollyPro-Regular.woff',
-  '/img/favicon.ico',
-  '/img/webclip.png'
-];
-
-// Install event - cache resources
-self.addEventListener('install', (event) => {
-  event.waitUntil(
-    caches.open(CACHE_NAME)
-      .then((cache) => {
-        console.log('Opened cache');
-        return cache.addAll(urlsToCache);
-      })
-  );
+self.addEventListener('install', () => {
+  self.skipWaiting();
 });
 
-// Fetch event - serve from cache, fallback to network
-self.addEventListener('fetch', (event) => {
-  event.respondWith(
-    caches.match(event.request)
-      .then((response) => {
-        // Cache hit - return response
-        if (response) {
-          return response;
-        }
-        return fetch(event.request);
-      }
-    )
-  );
-});
-
-// Activate event - clean up old caches
 self.addEventListener('activate', (event) => {
-  const cacheWhitelist = [CACHE_NAME];
   event.waitUntil(
-    caches.keys().then((cacheNames) => {
-      return Promise.all(
-        cacheNames.map((cacheName) => {
-          if (cacheWhitelist.indexOf(cacheName) === -1) {
-            return caches.delete(cacheName);
-          }
-        })
-      );
-    })
+    caches.keys()
+      .then((names) => Promise.all(names.map((name) => caches.delete(name))))
+      .then(() => self.registration.unregister())
   );
 });
