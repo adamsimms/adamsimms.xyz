@@ -116,15 +116,8 @@ strong {
   font-weight: var(--weight-medium);
   line-height: var(--leading-tight);
   letter-spacing: var(--tracking-display);
+  color: var(--color-text);
   text-wrap: balance;
-}
-
-.heading strong {
-  font-weight: var(--weight-semibold);
-}
-
-.orange-text {
-  color: var(--color-primary);
 }
 
 /* Body copy */

@@ -34,7 +34,6 @@ const criticalSelectors = [
   '.container',
   '.intro',
   '.heading',
-  '.orange-text',
   '.paragraph',
   '.lightning-bolt',
   '.skip-navigation',
