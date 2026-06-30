@@ -1,6 +1,6 @@
 # adamsimms.xyz
 
-Personal portfolio website for Adam Simms - technologist, designer, artist, and educator.
+CV for Adam Simms - technologist, designer, artist, and educator.
 
 ## 🚀 Overview
 
@@ -138,7 +138,3 @@ Adam Simms
 - Website: [adamsimms.xyz](https://adamsimms.xyz)
 - LinkedIn: [linkedin.com/in/adamsimms](https://www.linkedin.com/in/adamsimms)
 - Instagram: [@adamsimms](https://instagram.com/adamsimms)
-
----
-
-Built with ❤️ by Adam Simms
