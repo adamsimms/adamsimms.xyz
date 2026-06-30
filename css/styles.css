@@ -4,11 +4,12 @@
   --color-text-muted: #525252;
   --color-background: #fff;
   --color-surface: #ececec;
-  --color-paper-content: #fcfcfc;
-  --color-paper-aside: #fafafa;
+  --color-paper-content: #f1f1f1;
+  --color-paper-aside: #f9f9f9;
   --color-paper-nav: #fff;
+  --col-top-inset: var(--space-8);
   --col-lead-height: calc(var(--font-size-lg) * var(--leading-small));
-  --col-sync-offset: calc(var(--space-5) + var(--col-lead-height) + var(--space-5));
+  --col-sync-offset: calc(var(--space-5) + var(--col-top-inset) + var(--col-lead-height) + var(--space-5));
   --baseline-adjust-aside: calc((var(--font-size-md) - var(--font-size-xs)) * 0.38);
   --baseline-adjust-nav: calc((var(--font-size-md) - var(--font-size-sm)) * 0.35);
   --font-heading: 'Outfit', sans-serif;
@@ -170,6 +171,7 @@ strong {
 .container--three-col .about {
   grid-area: content;
   min-width: 0;
+  padding-top: calc(var(--space-5) + var(--col-top-inset));
   background-color: var(--color-paper-content);
 }
 
