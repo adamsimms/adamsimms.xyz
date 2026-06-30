@@ -116,14 +116,16 @@ strong {
   left: var(--spacing-xxlarge);
   display: grid;
   grid-template-columns: minmax(0, var(--measure)) 14rem 9rem;
+  grid-template-rows: auto 1fr;
   grid-template-areas:
     'intro intro intro'
     'content aside nav';
-  align-items: start;
+  align-items: stretch;
   row-gap: var(--space-3);
   column-gap: var(--spacing-xlarge);
   width: max-content;
   max-width: calc(100% - var(--spacing-xxlarge) * 2);
+  min-height: calc(100vh - var(--spacing-xlarge) - var(--spacing-xxlarge));
   margin: var(--spacing-xlarge) 0 var(--spacing-xxlarge);
   padding: 0;
   box-sizing: border-box;
@@ -153,23 +155,28 @@ strong {
   color: var(--color-text-muted);
 }
 
+.container--three-col .about,
+.container--three-col .extra,
+.container--three-col .site-nav {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  padding: var(--space-4);
+  border-radius: 2px;
+  box-shadow: 0 1px 2px color-mix(in srgb, var(--color-text) 5%, transparent);
+}
+
 .container--three-col .about {
   grid-area: content;
   min-width: 0;
-  padding: var(--space-4);
   background-color: var(--color-paper-content);
-  border-radius: 2px;
-  box-shadow: 0 1px 2px color-mix(in srgb, var(--color-text) 5%, transparent);
 }
 
 .container--three-col .site-nav {
   grid-area: nav;
   position: sticky;
   top: var(--spacing-xlarge);
-  padding: var(--space-4);
   background-color: var(--color-paper-nav);
-  border-radius: 2px;
-  box-shadow: 0 1px 2px color-mix(in srgb, var(--color-text) 5%, transparent);
 }
 
 .container--three-col .extra {
@@ -177,12 +184,9 @@ strong {
   position: sticky;
   top: var(--spacing-xlarge);
   margin-top: 0;
-  padding: var(--space-4);
   padding-top: var(--space-4);
   background-color: var(--color-paper-aside);
   border-top: none;
-  border-radius: 2px;
-  box-shadow: 0 1px 2px color-mix(in srgb, var(--color-text) 5%, transparent);
 }
 
 .nav-links {
@@ -456,6 +460,7 @@ em {
     max-width: calc(100% - var(--spacing-xlarge) * 2);
     margin-inline: 0;
     grid-template-columns: minmax(0, 1fr) 12rem;
+    grid-template-rows: auto 1fr auto;
     grid-template-areas:
       'intro intro'
       'content aside'
@@ -487,12 +492,20 @@ em {
     max-width: min(80%, calc(100% - var(--spacing-xlarge) * 2));
     margin-inline: 0;
     grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    min-height: auto;
     grid-template-areas:
       'intro'
       'content'
       'aside'
       'nav';
     padding: 0;
+  }
+
+  .container--three-col .about,
+  .container--three-col .extra,
+  .container--three-col .site-nav {
+    height: auto;
   }
 }
 
