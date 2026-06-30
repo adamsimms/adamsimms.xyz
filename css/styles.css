@@ -3,6 +3,10 @@
   --color-text: #171717;
   --color-text-muted: #525252;
   --color-background: #fff;
+  --color-surface: #ececec;
+  --color-paper-content: #fafafa;
+  --color-paper-aside: #f4f4f4;
+  --color-paper-nav: #fff;
   --font-heading: 'Outfit', sans-serif;
   --font-body: 'Inter', sans-serif;
   --font-sans: 'Inter', sans-serif;
@@ -86,6 +90,7 @@ html {
   letter-spacing: var(--tracking-body);
   font-feature-settings: 'kern' 1, 'liga' 1, 'calt' 1;
   color: var(--color-text);
+  background-color: var(--color-surface);
   hanging-punctuation: first last;
 }
 
@@ -151,12 +156,20 @@ strong {
 .container--three-col .about {
   grid-area: content;
   min-width: 0;
+  padding: var(--space-4);
+  background-color: var(--color-paper-content);
+  border-radius: 2px;
+  box-shadow: 0 1px 2px color-mix(in srgb, var(--color-text) 5%, transparent);
 }
 
 .container--three-col .site-nav {
   grid-area: nav;
   position: sticky;
   top: var(--spacing-xlarge);
+  padding: var(--space-4);
+  background-color: var(--color-paper-nav);
+  border-radius: 2px;
+  box-shadow: 0 1px 2px color-mix(in srgb, var(--color-text) 5%, transparent);
 }
 
 .container--three-col .extra {
@@ -164,8 +177,12 @@ strong {
   position: sticky;
   top: var(--spacing-xlarge);
   margin-top: 0;
-  padding-top: 0;
+  padding: var(--space-4);
+  padding-top: var(--space-4);
+  background-color: var(--color-paper-aside);
   border-top: none;
+  border-radius: 2px;
+  box-shadow: 0 1px 2px color-mix(in srgb, var(--color-text) 5%, transparent);
 }
 
 .nav-links {
