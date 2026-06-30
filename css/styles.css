@@ -107,17 +107,19 @@ strong {
 .container--three-col {
   position: relative;
   left: auto;
+  right: auto;
   display: grid;
   grid-template-columns: minmax(0, var(--measure)) 14rem 9rem;
   grid-template-areas:
     'intro intro intro'
     'content aside nav';
   align-items: start;
+  justify-content: center;
   gap: var(--spacing-xlarge);
-  width: 100%;
-  max-width: 72rem;
+  width: fit-content;
+  max-width: min(72rem, 100% - 2 * var(--spacing-xxlarge));
   margin: var(--spacing-xlarge) auto var(--spacing-xxlarge);
-  padding: 0 var(--spacing-xxlarge);
+  padding: 0;
   box-sizing: border-box;
 }
 
@@ -396,13 +398,16 @@ em {
   }
 
   .container--three-col {
+    left: auto;
+    width: 100%;
+    max-width: min(72rem, 100% - 2 * var(--spacing-xlarge));
+    margin-inline: auto;
     grid-template-columns: minmax(0, 1fr) 12rem;
     grid-template-areas:
       'intro intro'
       'content aside'
       'nav nav';
     gap: var(--spacing-large);
-    max-width: none;
     padding: 0 var(--spacing-xlarge);
   }
 
