@@ -2,7 +2,7 @@
  * Service Worker for offline functionality
  */
 
-const CACHE_NAME = 'adamsimms-v1';
+const CACHE_NAME = 'adamsimms-v2';
 const urlsToCache = [
   '/',
   '/index.html',
@@ -10,8 +10,6 @@ const urlsToCache = [
   '/css/webflow.css',
   '/css/styles.css',
   '/fonts/IconFont-Regular-0.9.3.woff2',
-  '/fonts/Sabon.woff',
-  '/fonts/DollyPro-Regular.woff',
   '/img/favicon.ico',
   '/img/webclip.png'
 ];
