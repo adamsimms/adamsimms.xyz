@@ -130,7 +130,7 @@ strong {
 
 .container--three-col .heading {
   margin: 0;
-  font-size: var(--font-size-base);
+  font-size: var(--font-size-md);
   font-weight: var(--weight-bold);
   line-height: var(--leading-small);
   letter-spacing: var(--tracking-caps);
