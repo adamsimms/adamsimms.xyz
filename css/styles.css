@@ -43,10 +43,18 @@ p {
   position: absolute;
   left: var(--spacing-xxlarge);
   display: block;
-  max-width: 28rem;
+  max-width: 30%;
   margin: var(--spacing-xlarge) auto 0;
   padding: 0;
   font-family: var(--font-body);
+}
+
+.container--timeline {
+  max-width: 28rem;
+}
+
+.experiment-note {
+  margin-top: var(--spacing-medium);
 }
 
 .heading {
@@ -172,6 +180,10 @@ p {
 
 @media screen and (max-width: 991px) {
   .container {
+    max-width: 60%;
+  }
+
+  .container--timeline {
     max-width: 24rem;
   }
 }
@@ -179,6 +191,10 @@ p {
 @media screen and (max-width: 767px) {
   .container {
     left: var(--spacing-xlarge);
+    max-width: 80%;
+  }
+
+  .container--timeline {
     max-width: none;
     width: calc(100% - var(--spacing-xlarge) * 2);
   }
