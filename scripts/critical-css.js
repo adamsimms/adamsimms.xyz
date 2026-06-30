@@ -28,13 +28,14 @@ const normalize = fs.readFileSync(normalizePath, 'utf8');
 // This includes: root variables, body, container, heading, paragraph, intro section
 const criticalSelectors = [
   ':root',
+  'html',
   'body',
   '.body',
   '.container',
+  '.intro',
   '.heading',
   '.orange-text',
   '.paragraph',
-  '.intro',
   '.lightning-bolt',
   '.skip-navigation',
   'header',

@@ -16,7 +16,7 @@
     <link href="css/normalize.css" rel="stylesheet" />
     <link href="css/styles.css" rel="stylesheet" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,400..600;1,14..32,400..600&family=JetBrains+Mono:ital,wght@0,400..600;1,400..600&family=Outfit:wght@400..600&display=swap"
       rel="stylesheet"
     />
 
@@ -25,58 +25,67 @@
     <link href="img/webclip.png" rel="apple-touch-icon" />
 
     <style>
+      .error-container {
+        position: relative;
+        left: auto;
+        text-align: left;
+        min-height: 80vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        max-width: var(--measure);
+      }
+
       .error-code {
-        font-size: 120px;
-        line-height: 1;
-        margin-bottom: 20px;
+        margin: 0 0 var(--space-2);
         font-family: var(--font-heading);
+        font-size: clamp(4.5rem, 12vw, 7.5rem);
+        font-weight: var(--weight-medium);
+        line-height: var(--leading-tight);
+        letter-spacing: var(--tracking-display);
         color: var(--color-primary);
-        font-weight: 600;
       }
 
       .error-message {
-        font-size: 32px;
-        margin-bottom: 30px;
+        margin: 0 0 var(--space-4);
         font-family: var(--font-heading);
+        font-size: var(--font-size-display);
+        font-weight: var(--weight-medium);
+        line-height: var(--leading-tight);
+        letter-spacing: var(--tracking-heading);
       }
 
       .error-description {
-        margin-bottom: 40px;
-        max-width: 500px;
+        margin-bottom: var(--space-5);
       }
 
       .home-button {
         display: inline-block;
-        padding: 15px 30px;
+        width: fit-content;
+        padding: 0.72em 1.35em;
         background-color: var(--color-primary);
         color: var(--color-background);
-        text-decoration: none;
-        border-radius: 4px;
         font-family: var(--font-sans);
-        font-weight: 700;
-        transition: background-color 0.3s ease;
+        font-size: var(--font-size-sm);
+        font-weight: var(--weight-semibold);
+        line-height: var(--leading-small);
+        letter-spacing: var(--tracking-small);
+        text-decoration: none;
+        border-radius: 2px;
+        transition: background-color 0.15s ease;
       }
 
       .home-button:hover {
         background-color: #e64500;
       }
 
-      .error-container {
-        text-align: center;
-        min-height: 80vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+      .error-links {
+        margin-top: var(--space-7);
       }
 
-      @media screen and (max-width: 479px) {
+      @media screen and (width <= 479px) {
         .error-code {
-          font-size: 80px;
-        }
-
-        .error-message {
-          font-size: 24px;
+          font-size: clamp(3.5rem, 18vw, 5rem);
         }
       }
     </style>
@@ -91,9 +100,9 @@
         </p>
         <a href="/" class="home-button" aria-label="Return to homepage">Back to Home</a>
 
-        <div style="margin-top: 60px">
+        <div class="error-links">
           <p class="small">Looking for something specific? Here are some helpful links:</p>
-          <nav aria-label="Quick navigation links" style="margin-top: 20px">
+          <nav aria-label="Quick navigation links" class="footer-links">
             <a
               href="https://www.linkedin.com/in/adamsimms"
               target="_blank"
