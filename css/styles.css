@@ -180,6 +180,32 @@ strong {
   color: var(--color-primary);
 }
 
+.nav-links a[aria-current='page'] {
+  color: var(--color-primary);
+}
+
+.last-updated {
+  margin: 0 0 var(--space-3);
+  font-family: var(--font-sans);
+  font-size: var(--font-size-xs);
+  line-height: var(--leading-small);
+  letter-spacing: var(--tracking-small);
+  color: var(--color-text-muted);
+}
+
+.section-label {
+  margin: var(--space-5) 0 var(--space-1);
+  font-family: var(--font-sans);
+  font-size: var(--font-size-xs);
+  line-height: var(--leading-small);
+  letter-spacing: var(--tracking-small);
+  color: var(--color-text-muted);
+}
+
+.section-label:first-of-type {
+  margin-top: 0;
+}
+
 .intro {
   margin-bottom: var(--space-5);
 }
@@ -396,17 +422,17 @@ em {
   }
 
   .container--three-col {
-    left: auto;
+    left: var(--spacing-xxlarge);
     width: 100%;
-    max-width: min(72rem, 100% - 2 * var(--spacing-xlarge));
-    margin-inline: auto;
+    max-width: calc(100% - var(--spacing-xlarge) * 2);
+    margin-inline: 0;
     grid-template-columns: minmax(0, 1fr) 12rem;
     grid-template-areas:
       'intro intro'
       'content aside'
       'nav nav';
     gap: var(--spacing-large);
-    padding: 0 var(--spacing-xlarge);
+    padding: 0;
   }
 
   .container--three-col .site-nav,
@@ -427,17 +453,17 @@ em {
   }
 
   .container--three-col {
-    left: auto;
+    left: var(--spacing-xlarge);
     width: 100%;
-    max-width: min(var(--measure), 100% - 2 * var(--spacing-xlarge));
-    margin-inline: auto;
+    max-width: min(80%, calc(100% - var(--spacing-xlarge) * 2));
+    margin-inline: 0;
     grid-template-columns: 1fr;
     grid-template-areas:
       'intro'
       'content'
       'aside'
       'nav';
-    padding: 0 var(--spacing-xlarge);
+    padding: 0;
   }
 }
 
@@ -461,10 +487,10 @@ em {
   }
 
   .container--three-col {
-    left: auto;
-    max-width: min(90%, var(--measure));
-    margin-inline: auto;
-    padding: 0 var(--spacing-medium);
+    left: 7px;
+    max-width: 90%;
+    margin-inline: 0;
+    padding-left: var(--spacing-medium);
   }
 
   .about .paragraph {
