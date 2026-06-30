@@ -26,6 +26,7 @@
   --weight-regular: 400;
   --weight-medium: 500;
   --weight-semibold: 600;
+  --weight-bold: 700;
 
   /* Spatial rhythm tied to body line-height */
   --space-unit: 1.62rem;
