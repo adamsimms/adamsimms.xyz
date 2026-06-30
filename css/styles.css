@@ -55,6 +55,60 @@ p {
   max-width: 28rem;
 }
 
+.container--three-col {
+  position: relative;
+  left: auto;
+  display: grid;
+  grid-template-columns: 9rem minmax(0, 32rem) 14rem;
+  grid-template-areas: 'nav content aside';
+  align-items: start;
+  gap: var(--spacing-xlarge);
+  width: 100%;
+  max-width: 72rem;
+  margin: var(--spacing-xlarge) auto var(--spacing-xxlarge);
+  padding: 0 var(--spacing-xxlarge);
+  box-sizing: border-box;
+}
+
+.container--three-col .site-nav {
+  grid-area: nav;
+  position: sticky;
+  top: var(--spacing-xlarge);
+}
+
+.container--three-col .content {
+  grid-area: content;
+  min-width: 0;
+}
+
+.container--three-col .extra {
+  grid-area: aside;
+  position: sticky;
+  top: var(--spacing-xlarge);
+}
+
+.nav-links {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-family: var(--font-sans);
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.nav-links li {
+  margin-bottom: var(--spacing-small);
+}
+
+.nav-links a {
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+.nav-links a:hover {
+  color: var(--color-primary);
+}
+
 .experiment-note {
   margin-top: var(--spacing-medium);
 }
@@ -188,6 +242,21 @@ p {
   .container--timeline {
     max-width: 24rem;
   }
+
+  .container--three-col {
+    grid-template-columns: 8rem minmax(0, 1fr);
+    grid-template-areas:
+      'nav content'
+      'aside aside';
+    gap: var(--spacing-large);
+    max-width: none;
+    padding: 0 var(--spacing-xlarge);
+  }
+
+  .container--three-col .site-nav,
+  .container--three-col .extra {
+    position: static;
+  }
 }
 
 @media screen and (width <= 767px) {
@@ -199,6 +268,15 @@ p {
   .container--timeline {
     max-width: none;
     width: calc(100% - var(--spacing-xlarge) * 2);
+  }
+
+  .container--three-col {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      'nav'
+      'content'
+      'aside';
+    padding: 0 var(--spacing-xlarge);
   }
 }
 
@@ -214,6 +292,10 @@ p {
     margin-right: auto;
     margin-left: auto;
     padding-left: var(--spacing-medium);
+  }
+
+  .container--three-col {
+    padding: 0 var(--spacing-medium);
   }
 
   .heading {
