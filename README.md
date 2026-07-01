@@ -71,14 +71,6 @@ Run `npm run lint` before committing.
 
 The site deploys automatically to Cloudflare Pages on pushes to `main`. See [DEPLOYMENT.md](DEPLOYMENT.md) for setup details.
 
-## Accessibility
-
-- Semantic HTML5 elements
-- ARIA labels for screen readers
-- Skip navigation link
-- Keyboard-friendly navigation
-- Responsive typography
-
 ## Contact
 
 Adam Simms
