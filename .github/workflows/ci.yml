@@ -28,4 +28,4 @@ jobs:
         run: npm run lint
 
       - name: Check code formatting
-        run: prettier --check '**/*.{html,css,json,md}'
+        run: npm run format:check

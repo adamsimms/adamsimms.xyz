@@ -8,6 +8,7 @@
     "lint:html": "htmlhint '**/*.html'",
     "lint:css": "stylelint 'css/styles.css' --allow-empty-input",
     "format": "prettier --write '**/*.{html,css,json,md}'",
+    "format:check": "prettier --check '**/*.{html,css,json,md}'",
     "validate": "npm run lint",
     "lighthouse": "npx lighthouse https://adamsimms.xyz --output=html --output-path=./lighthouse-report.html",
     "deploy": "npx wrangler pages deploy . --project-name=adamsimms-xyz",
