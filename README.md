@@ -79,18 +79,6 @@ The site deploys automatically to Cloudflare Pages on pushes to `main`. See [DEP
 - Keyboard-friendly navigation
 - Responsive typography
 
-## Security
-
-Security headers are configured in `_headers`. To report a vulnerability, see [SECURITY.md](SECURITY.md).
-
-## License
-
-MIT License — see [LICENSE](LICENSE) for details.
-
-## Contributing
-
-See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
-
 ## Contact
 
 Adam Simms
