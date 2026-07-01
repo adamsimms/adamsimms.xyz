@@ -20,7 +20,7 @@ adamsimms.xyz/
 ├── css/
 │   ├── normalize.css    # CSS reset
 │   └── styles.css       # Site styles
-├── img/                 # Favicon and social images
+├── images/             # Favicon and social images
 ├── index.html           # Homepage
 ├── now/                 # Now page (hidden from search engines)
 ├── 404.html             # Custom error page
