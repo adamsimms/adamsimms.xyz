@@ -1,140 +1,100 @@
 # adamsimms.xyz
 
-CV for Adam Simms - technologist, designer, artist, and educator.
+CV for Adam Simms — technologist, designer, artist, and educator.
 
-## 🚀 Overview
+## Overview
 
-This is a static website showcasing Adam Simms' professional work, education, and creative projects. The site is built with modern web standards, emphasizing performance, accessibility, and SEO.
+A static website showcasing professional work, education, and creative projects. Built with semantic HTML and CSS, deployed on Cloudflare Pages.
 
-## 🛠️ Tech Stack
+## Tech stack
 
-- **HTML5** - Semantic markup with accessibility features
-- **CSS3** - Custom properties (CSS variables), responsive design
-- **Vanilla JavaScript** - Service Worker for offline functionality
-- **Google Analytics** - Privacy-respecting analytics
-- **Progressive Web App** - Installable with offline support
+- **HTML5** — Semantic markup with accessibility features
+- **CSS3** — Custom properties, responsive design
+- **Google Fonts** — Inter, Outfit, JetBrains Mono
+- **Cloudflare Pages** — Hosting, CDN, and security headers
 
-## 📦 Project Structure
+## Project structure
 
 ```
 adamsimms.xyz/
 ├── css/
-│   ├── normalize.css      # CSS reset
-│   ├── webflow.css        # Base Webflow styles
-│   └── styles.css         # Custom styles with CSS variables
-├── fonts/                 # Self-hosted web fonts
-├── img/                   # Images and icons
-├── js/
-│   └── webflow.js         # Webflow utilities
-├── scripts/
-│   └── optimize.js        # Build optimization script
-├── index.html             # Main HTML file
-├── manifest.json          # PWA manifest
-├── service-worker.js      # Service worker for offline support
-├── sitemap.xml           # XML sitemap for SEO
-├── robots.txt            # Robots directives
-├── _headers              # Security headers (for Netlify/Cloudflare)
-└── package.json          # Dependencies and scripts
+│   ├── normalize.css    # CSS reset
+│   └── styles.css       # Site styles
+├── img/                 # Favicon and social images
+├── index.html           # Homepage
+├── now/                 # Now page (hidden from search engines)
+├── 404.html             # Custom error page
+├── _headers             # Security headers
+├── _redirects           # URL redirects
+└── package.json         # Dev tooling
 ```
 
-## 🏃 Getting Started
+## Getting started
 
 ### Prerequisites
 
-- Node.js (v18 or higher recommended)
-- npm or yarn
+- Node.js 20+
+- npm
 
 ### Installation
 
-1. Clone the repository:
 ```bash
 git clone https://github.com/adamsimms/adamsimms.xyz.git
 cd adamsimms.xyz
-```
-
-2. Install dependencies:
-```bash
 npm install
-```
-
-3. Start local development server:
-```bash
 npm start
 ```
 
-The site will be available at `http://localhost:3000`
+The site will be available at `http://localhost:3000`.
 
-## 🔧 Development
+## Development
 
-### Available Scripts
+### Scripts
 
-- `npm start` - Start local development server
-- `npm run build` - Build optimized production assets
-- `npm run lint` - Run all linters (HTML, CSS, JS)
-- `npm run format` - Format code with Prettier
-- `npm run validate` - Validate HTML and run linters
-- `npm run lighthouse` - Run Lighthouse performance audit
+- `npm start` — Local development server
+- `npm run lint` — Run HTML and CSS linters
+- `npm run format` — Format code with Prettier
+- `npm run validate` — Alias for `npm run lint`
+- `npm run lighthouse` — Run a Lighthouse audit against production
+- `npm run deploy` — Deploy to Cloudflare Pages via Wrangler
 
-### Code Quality
+### Code quality
 
-This project uses:
-- **ESLint** for JavaScript linting
-- **Stylelint** for CSS linting
 - **HTMLHint** for HTML validation
-- **Prettier** for code formatting
+- **Stylelint** for CSS linting
+- **Prettier** for formatting
+- **Husky + lint-staged** for pre-commit checks
 
-Run `npm run lint` before committing to ensure code quality.
+Run `npm run lint` before committing.
 
-## 🚀 Deployment
+## Deployment
 
-The site is deployed via GitHub Pages and is automatically updated when changes are pushed to the `main` branch.
+The site deploys automatically to Cloudflare Pages on pushes to `main`. See [DEPLOYMENT.md](DEPLOYMENT.md) for setup details.
 
-### Manual Deployment
+## Accessibility
 
-```bash
-npm run deploy
-```
-
-## ♿ Accessibility
-
-This site is built with accessibility in mind:
 - Semantic HTML5 elements
 - ARIA labels for screen readers
 - Skip navigation link
 - Keyboard-friendly navigation
-- High contrast ratios
-- Responsive font sizing
+- Responsive typography
 
-## 🔒 Security
+## Security
 
-Security features implemented:
-- Content Security Policy (CSP)
-- X-Frame-Options header
-- X-Content-Type-Options header
-- Subresource Integrity (SRI) for external scripts
-- HTTPS-only external resources
+Security headers are configured in `_headers`. To report a vulnerability, see [SECURITY.md](SECURITY.md).
 
-## 📈 Performance
+## License
 
-Performance optimizations:
-- Minimal JavaScript footprint
-- CSS custom properties
-- Font preloading
-- Resource hints (preconnect, dns-prefetch)
-- Service Worker caching
-- Lazy loading where applicable
+MIT License — see [LICENSE](LICENSE) for details.
 
-## 📄 License
+## Contributing
 
-MIT License - See [LICENSE](LICENSE) file for details
+See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 
-## 🤝 Contributing
-
-Contributions, issues, and feature requests are welcome! See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
-
-## 📧 Contact
+## Contact
 
 Adam Simms
+
 - Website: [adamsimms.xyz](https://adamsimms.xyz)
 - LinkedIn: [linkedin.com/in/adamsimms](https://www.linkedin.com/in/adamsimms)
 - Instagram: [@adamsimms](https://instagram.com/adamsimms)

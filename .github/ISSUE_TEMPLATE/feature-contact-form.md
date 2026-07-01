@@ -4,35 +4,38 @@ about: Implement a contact form for visitor inquiries
 title: 'feat: Add contact form to website'
 labels: enhancement, feature
 assignees: ''
-
 ---
 
 ## Feature Request: Contact Form
 
 ### Description
+
 Add a contact form to allow visitors to reach out directly through the website, rather than relying solely on external booking or social media links.
 
 ### Proposed Implementation
 
 #### Option 1: Netlify Forms (Recommended)
+
 **Pros:**
+
 - No backend needed
 - Built-in spam protection
 - Free on Netlify
 - Easy to implement
 
 **Implementation:**
+
 ```html
 <form name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
-  <input type="hidden" name="form-name" value="contact">
+  <input type="hidden" name="form-name" value="contact" />
   <p class="hidden">
-    <label>Don't fill this out: <input name="bot-field"></label>
+    <label>Don't fill this out: <input name="bot-field" /></label>
   </p>
   <p>
-    <label>Name: <input type="text" name="name" required></label>
+    <label>Name: <input type="text" name="name" required /></label>
   </p>
   <p>
-    <label>Email: <input type="email" name="email" required></label>
+    <label>Email: <input type="email" name="email" required /></label>
   </p>
   <p>
     <label>Message: <textarea name="message" required></textarea></label>
@@ -44,19 +47,24 @@ Add a contact form to allow visitors to reach out directly through the website, 
 ```
 
 #### Option 2: Formspree
+
 **Pros:**
+
 - Simple integration
 - Email notifications
 - reCAPTCHA support
 - Free tier available
 
 #### Option 3: Custom Backend
+
 **Pros:**
+
 - Full control
 - Can integrate with CRM
 - Custom validation
 
 **Cons:**
+
 - Requires backend service
 - More maintenance
 
@@ -127,7 +135,9 @@ Add a contact form to allow visitors to reach out directly through the website, 
 - [Web Accessibility Initiative - Forms](https://www.w3.org/WAI/tutorials/forms/)
 
 ### Priority
+
 **Medium** - Nice to have but not critical since external booking link exists
 
 ### Estimated Effort
+
 **2-4 hours** depending on chosen implementation
