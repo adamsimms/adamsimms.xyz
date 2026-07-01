@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /now/
 
 Sitemap: https://adamsimms.xyz/sitemap.xml

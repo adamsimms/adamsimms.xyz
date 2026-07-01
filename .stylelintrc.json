@@ -1,7 +1,9 @@
 {
   "extends": "stylelint-config-standard",
+  "ignoreFiles": ["css/normalize.css"],
   "rules": {
     "selector-class-pattern": null,
+    "no-descending-specificity": null,
     "alpha-value-notation": "number",
     "color-function-notation": "legacy"
   }
