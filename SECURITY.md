@@ -4,10 +4,7 @@
 
 **Do not open public GitHub issues for security vulnerabilities.**
 
-Please report security issues privately using one of these channels:
-
-1. **GitHub private vulnerability reporting** — Use the [Security tab](https://github.com/adamsimms/adamsimms.xyz/security/advisories/new) on this repository to submit a confidential report.
-2. **Email** — Contact Adam Simms via [LinkedIn](https://www.linkedin.com/in/adamsimms).
+Please report security issues privately using [GitHub private vulnerability reporting](https://github.com/adamsimms/adamsimms.xyz/security/advisories/new).
 
 Include as much detail as possible: description, steps to reproduce, impact, and any suggested fix.
 
