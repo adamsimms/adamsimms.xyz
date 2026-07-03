@@ -1,2 +1,8 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+
+# Portfolio archive media (2009–2014)
+archive/2009/**/*.mp4 filter=lfs diff=lfs merge=lfs -text
+archive/2009/**/*.swf filter=lfs diff=lfs merge=lfs -text
+archive/2009/**/*.wasm filter=lfs diff=lfs merge=lfs -text
+archive/2009/js/ruffle/** filter=lfs diff=lfs merge=lfs -text

@@ -17,6 +17,16 @@ yarn.lock
 *.swo
 *~
 
+# Build output
+css/*.min.css
+css/critical.css
+/dist/
+/build/
+
+# Generated images
+images/*.webp
+images/*.avif
+
 # Testing
 coverage/
 .nyc_output/
@@ -29,6 +39,7 @@ lighthouse-report.html
 .env
 .env.local
 .env.*.local
+.dev.vars
 
 # Temporary files
 *.tmp

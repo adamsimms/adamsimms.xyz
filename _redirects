@@ -10,6 +10,10 @@ http://www.adamsimms.xyz/* https://adamsimms.xyz/:splat 301!
 # Legacy image path
 /img/* /images/:splat 301
 
+# Portfolio archive (2009–2014)
+/archive/2009 /archive/2009/dist/ 302
+/2009/* /archive/2009/dist/:splat 301
+
 # SPA fallback - serve index.html for all non-file requests
 # (Uncomment if you add client-side routing later)
 # /* /index.html 200
