@@ -21,8 +21,8 @@ yarn.lock
 # Build output
 css/*.min.css
 css/critical.css
-dist/
-build/
+/dist/
+/build/
 
 # Generated images
 img/*.webp
@@ -40,6 +40,7 @@ lighthouse-report.html
 .env
 .env.local
 .env.*.local
+.dev.vars
 
 # Temporary files
 *.tmp

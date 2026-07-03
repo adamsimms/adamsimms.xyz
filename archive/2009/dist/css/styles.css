@@ -1,0 +1,156 @@
+/***** Global Settings *****/
+ 
+html, body {
+border:0;
+margin:0;
+padding:0;
+background: #fff;
+color: #000;
+font-size:14px;
+font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+ 
+/***** Headings *****/
+ 
+h1, h2, h3, h4, h5, h6 {
+margin:0;
+padding:0;
+font-weight:normal;
+}
+ 
+h1{
+	position: absolute;
+	top: 0;
+	left: 50px;
+	font-size:1em;
+	color: #fff;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+#sidebar h1 a {
+	color:#666;
+	text-decoration: none;
+}
+ 
+h2 {
+font-size:1em;
+margin: 50px 0 5px 0;
+}
+ 
+h3 {
+font-size:1em;
+}
+
+p {
+color: #999;
+font-size: 0.8em;
+margin: 0 0 0 0;
+line-height: 1.25em;
+text-align: justify;
+}
+ 
+/***** Common Formatting *****/
+ 
+ 
+/***** Links *****/
+ 
+a,
+a:link,
+a:visited,
+a:hover {
+text-decoration:none;
+color: #111;
+font-size: 1em;
+}
+
+/***** Main *****/
+#sidebar {
+	width: 200px;
+	display: block; 
+	float: left;
+	margin: 50px 0 0 0;
+	position: fixed;
+	text-align: right;
+}
+
+ul#nav {
+	list-style: none;
+	font-size: .75em;
+	color: #777;
+	margin: 25px 0 0;
+	text-align: left;
+	width: 162px;
+	text-align: right;
+	float: right;
+}
+
+ul#nav li {
+	margin: 0 0 6px 0;
+}
+
+li.active a {
+	color: #111;
+}
+
+ul#nav li a {
+	color:#777;
+	text-decoration: none;
+}
+
+ul#nav li a:hover  {
+	color:#ccc;
+	text-decoration: none;
+}
+
+ul#nav li.title {
+	 color:#111;
+}
+
+#content {
+	display: block;
+	float: left;
+	margin: 118px 0 0 250px;
+	text-align: center;
+}
+
+#content a {color: #111;}
+
+.desolate img {float: left; margin: 0 30px 30px 0; height: 600px; width: 800px}
+
+#demo { padding: 20px; }
+
+a#prev, a#next { font-size: 14px; color: #000; text-decoration: none; }
+a#prev:hover, a#next:hover {text-decoration: underline; }
+	
+.portfolio {padding:0; margin:-25px 0 25px 0;}
+.portfolio img {top:0; margin: 0;}
+
+#numbers a {font-size: 0.1em; margin: 5px 1px 3px 2px; float: left; padding: 3px 4px; border: 1px solid #ccc; background: #fff; color: #fff; -moz-border-radius: 5px; -webkit-border-radius: 5px;}
+#numbers a.activeSlide { color:#ccc; background: #ccc; -moz-border-radius: 5px; -webkit-border-radius: 5px;}
+#numbers a:focus { outline: none; }
+
+/***** Global Classes *****/
+ 
+.clear         { clear:both; }
+.float-left    { float:left; }
+.float-right   { float:right; }
+ 
+.text-left     { text-align:left; }
+.text-right    { text-align:right; }
+.text-center   { text-align:center; }
+.text-justify  { text-align:justify; }
+ 
+.bold          { font-weight:bold; }
+.italic        { font-style:italic; }
+.underline     { border-bottom:1px solid; }
+.highlight     { background:#ffc; }
+ 
+.wrap          { width:960px;margin:0 auto; }
+ 
+.img-left      { float:left;margin:4px 10px 4px 0; }
+.img-right     { float:right;margin:4px 0 4px 10px; }
+ 
+.nopadding     { padding:0; }
+.noindent      { margin-left:0;padding-left:0; }
+.nobullet      { list-style:none;list-style-image:none; }

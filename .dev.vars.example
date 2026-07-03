@@ -1,0 +1,4 @@
+# Copy to .dev.vars for local `wrangler pages dev` testing.
+# Set the same values in Cloudflare Pages → Settings → Environment variables.
+ARCHIVE_AUTH_USER=your-username
+ARCHIVE_AUTH_PASSWORD=your-password
