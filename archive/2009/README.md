@@ -1,8 +1,8 @@
 # Portfolio Archive (2009–2014)
 
-Source and static export for the archived Adam Simms portfolio.
+Static snapshot of the archived Adam Simms portfolio.
 
-**Live URL:** https://adamsimms.xyz/archive/2009/dist/
+**Live URL:** https://adamsimms.xyz/archive/2009/
 
 ## Password protection
 
@@ -23,37 +23,18 @@ cp .dev.vars.example .dev.vars   # from repo root
 npx wrangler pages dev .
 ```
 
-Static hosting with `php -S` or `npx serve` does not run the auth middleware — protection applies only on Cloudflare.
-
-## Structure
-
-```
-archive/2009/
-├── *.php, css/, js/, images/   # Source (PHP includes)
-├── build.php                    # Static export script
-└── dist/                        # Built static site (committed)
-```
-
-## Rebuild static export
-
-```bash
-cd archive/2009
-SITE_BASE_PATH=/archive/2009/dist php build.php
-```
+Static hosting with `npx serve` does not run the auth middleware — protection applies only on Cloudflare.
 
 ## Local preview
 
-**PHP source:**
-
 ```bash
+cd archive/2009
 php -S 127.0.0.1:9090
-# http://127.0.0.1:9090/index.php
-```
-
-**Static build:**
-
-```bash
-SITE_BASE_PATH=/archive/2009/dist php build.php
-cd dist && php -S 127.0.0.1:9090
 # http://127.0.0.1:9090/index.html
 ```
+
+## Editing
+
+Pages are plain HTML. Edit files directly in this folder and commit — no build step required.
+
+The original PHP source lives in the separate `design-v1` project if you ever need to regenerate from templates.
