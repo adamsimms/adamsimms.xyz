@@ -39,11 +39,7 @@
 
 <div id="content">
 	<div id="flash-content" class="portfolio">
-		<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="1000" height="560" title="HIV/AIDS: A Visual Understanding.">
-			<param name="movie" value="images/hivaids/intro.swf" />
-			<param name="quality" value="high" />
-			<embed src="images/hivaids/intro.swf" quality="high" type="application/x-shockwave-flash" width="1000" height="560"></embed>
-		</object>
+		<?php require_once __DIR__ . '/../../flash-embed.php'; render_flash_embed('images/hivaids/intro.swf', 1000, 560); ?>
 	</div>
 </div>
 

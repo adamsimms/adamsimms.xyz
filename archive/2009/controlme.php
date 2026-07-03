@@ -42,11 +42,7 @@
 <div id="content">
 
 		<div id="flash-content" class="portfolio">
-			<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="600" height="600" title="control_me">
-				<param name="movie" value="images/controlme/project_03.swf" />
-				<param name="quality" value="high" />
-				<embed src="images/controlme/project_03.swf" quality="high" type="application/x-shockwave-flash" width="600" height="600"></embed>
-			</object>
+			<?php require_once 'flash-embed.php'; render_flash_embed('images/controlme/project_03.swf', 600, 600); ?>
 		</div>
 
 </div>

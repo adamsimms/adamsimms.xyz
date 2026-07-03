@@ -28,7 +28,8 @@
 	window.RufflePlayer = window.RufflePlayer || {};
 	window.RufflePlayer.config = {
 		autoplay: "on",
-		unmuteOverlay: "hidden"
+		unmuteOverlay: "hidden",
+		publicPath: "js/ruffle/"
 	};
 	</script>
 	<script type="text/javascript" src="js/ruffle/ruffle.js"></script>
@@ -104,11 +105,17 @@
 
 <div id="content">
 	<div id="flash-content" class="portfolio">
-		<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="1000" height="560" title="HIV/AIDS: A Visual Understanding.">
-			<param name="movie" value="images/hivaids/intro.swf" />
-			<param name="quality" value="high" />
-			<embed src="images/hivaids/intro.swf" quality="high" type="application/x-shockwave-flash" width="1000" height="560"></embed>
-		</object>
+		<div id="ruffle-container"></div>
+<script type="text/javascript">
+window.addEventListener('DOMContentLoaded', function() {
+	var ruffle = window.RufflePlayer.newest();
+	var player = ruffle.createPlayer();
+	player.style.width = '1000px';
+	player.style.height = '560px';
+	document.getElementById('ruffle-container').appendChild(player);
+	player.load('images/hivaids/intro.swf');
+});
+</script>
 	</div>
 </div>
 

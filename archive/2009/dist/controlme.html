@@ -28,7 +28,8 @@
 	window.RufflePlayer = window.RufflePlayer || {};
 	window.RufflePlayer.config = {
 		autoplay: "on",
-		unmuteOverlay: "hidden"
+		unmuteOverlay: "hidden",
+		publicPath: "js/ruffle/"
 	};
 	</script>
 	<script type="text/javascript" src="js/ruffle/ruffle.js"></script>
@@ -107,11 +108,17 @@
 <div id="content">
 
 		<div id="flash-content" class="portfolio">
-			<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="600" height="600" title="control_me">
-				<param name="movie" value="images/controlme/project_03.swf" />
-				<param name="quality" value="high" />
-				<embed src="images/controlme/project_03.swf" quality="high" type="application/x-shockwave-flash" width="600" height="600"></embed>
-			</object>
+			<div id="ruffle-container"></div>
+<script type="text/javascript">
+window.addEventListener('DOMContentLoaded', function() {
+	var ruffle = window.RufflePlayer.newest();
+	var player = ruffle.createPlayer();
+	player.style.width = '600px';
+	player.style.height = '600px';
+	document.getElementById('ruffle-container').appendChild(player);
+	player.load('images/controlme/project_03.swf');
+});
+</script>
 		</div>
 
 </div>

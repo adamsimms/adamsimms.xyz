@@ -4,6 +4,13 @@
 	<h1><a href="index.php"><img src="images/logotype.png" /></a></h1>
 	
 	<ul id="nav">
+		<li class="title">PHOTO</li>
+		<li><a href="washedup.php">Washed-up</a></li>
+		<li><a href="desolate.php">Desolate</a></li>
+		<li><a href="fromto.php">From : To</a></li>
+		<li class="active"><a href="bed.php">Lie In It</a>&nbsp;></li>
+		<li><a href="controlme.php">Control_Me</a></li><br /><br />
+		
 		<li class="title">UI/UX</li>
 		<li><a href="pos.php">LightSpeed</a></li>
 		<li><a href="mobile.php">LightSpeed Mobile</a></li>
@@ -24,13 +31,8 @@
 		<li><a href="booth.php">LightSpeed Booth</a></li>
 		<li><a href="lamp.php">Lamp</a></li><br /><br />
 		
-		<li class="title">PHOTO</li>
-		<li><a href="washedup.php">Washed-up</a></li>
-		<li><a href="desolate.php">Desolate</a></li>
-		<li><a href="fromto.php">From : To</a></li>
-		<li class="active"><a href="bed.php">Lie In It</a>&nbsp;></li>
-		<li><a href="controlme.php">Control_Me</a></li><br /><br />
-		
+		<li class="title">VIDEO</li>
+		<li><a href="lsmobileads.php">LightSpeed Mobile Ads</a></li><br /><br />
 		
 		<li><a href="info.php" style="color: #111;">INFO</a></li>
 	</ul>

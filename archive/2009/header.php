@@ -48,7 +48,8 @@ if (defined('STATIC_BUILD')) {
 	window.RufflePlayer = window.RufflePlayer || {};
 	window.RufflePlayer.config = {
 		autoplay: "on",
-		unmuteOverlay: "hidden"
+		unmuteOverlay: "hidden",
+		publicPath: "js/ruffle/"
 	};
 	</script>
 	<script type="text/javascript" src="js/ruffle/ruffle.js"></script>

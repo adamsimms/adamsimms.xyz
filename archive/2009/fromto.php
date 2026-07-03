@@ -33,7 +33,7 @@
 		<li><a href="lamp.php">Lamp</a></li><br /><br />
 		
 		<li class="title">VIDEO</li>
-		<li><a href="">LightSpeed Mobile Ads</a></li><br /><br />
+		<li><a href="lsmobileads.php">LightSpeed Mobile Ads</a></li><br /><br />
 		
 		<li><a href="info.php" style="color: #111;">INFO</a></li>
 	</ul>
