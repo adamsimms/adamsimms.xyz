@@ -10,6 +10,7 @@
     "format": "prettier --write '**/*.{html,css,json,md}'",
     "format:check": "prettier --check '**/*.{html,css,json,md}'",
     "validate": "npm run lint",
+    "analytics:sync": "node scripts/sync-analytics.mjs",
     "lighthouse": "npx lighthouse https://adamsimms.xyz --output=html --output-path=./lighthouse-report.html",
     "deploy": "npx wrangler pages deploy . --project-name=adamsimms-xyz",
     "deploy:preview": "npx wrangler pages deploy . --project-name=adamsimms-xyz --branch=preview",

@@ -36,6 +36,11 @@ jobs:
       - name: Run linting
         run: npm run lint
 
+      - name: Inject Umami analytics
+        run: npm run analytics:sync
+        env:
+          UMAMI_WEBSITE_ID: ${{ vars.UMAMI_WEBSITE_ID }}
+
       - name: Deploy to Cloudflare Pages
         uses: cloudflare/pages-action@v1
         with:

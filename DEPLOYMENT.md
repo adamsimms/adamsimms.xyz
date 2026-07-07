@@ -68,9 +68,18 @@ npm run deploy:preview    # Deploy preview branch
 - `_headers` — Security headers (CSP, X-Frame-Options, etc.)
 - `_redirects` — www → apex, HTTP → HTTPS
 
-## Analytics (optional)
+## Umami analytics
 
-Enable [Cloudflare Web Analytics](https://developers.cloudflare.com/analytics/web-analytics/) in the Pages dashboard and add the beacon script to your HTML when ready.
+This site uses [Umami Cloud](https://umami.is/) (Hobby plan) for privacy-friendly analytics. Configuration lives in `analytics.config.json`.
+
+1. Sign up at [cloud.umami.is](https://cloud.umami.is) and add a website named `adamsimms.xyz`.
+2. Copy the website ID into `analytics.config.json` (`umamiWebsiteId`), or set the `UMAMI_WEBSITE_ID` repository variable for CI.
+3. Run `npm run analytics:sync` to inject the tracker into `index.html`.
+4. Deploy.
+
+The tracker is limited to `adamsimms.xyz` and `syllabi.adamsimms.xyz` via `data-domains`. Archive pages are not tracked.
+
+Syllabi use the same website ID — see [adamsimms/syllabi](https://github.com/adamsimms/syllabi).
 
 ## Troubleshooting
 
