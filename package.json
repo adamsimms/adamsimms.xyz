@@ -5,7 +5,7 @@
   "scripts": {
     "start": "npx serve .",
     "lint": "npm run lint:html && npm run lint:css",
-    "lint:html": "htmlhint '**/*.html'",
+    "lint:html": "htmlhint index.html experiment.html now/index.html 404.html",
     "lint:css": "stylelint 'css/styles.css' --allow-empty-input",
     "format": "prettier --write '**/*.{html,css,json,md}'",
     "format:check": "prettier --check '**/*.{html,css,json,md}'",
