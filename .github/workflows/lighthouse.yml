@@ -10,22 +10,16 @@ jobs:
   lighthouse:
     name: Run Lighthouse Audit
     runs-on: ubuntu-latest
-    
+
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v7
-      
-    - name: Run Lighthouse
-      uses: treosh/lighthouse-ci-action@v12
-      with:
-        urls: |
-          https://adamsimms.xyz/
-        uploadArtifacts: true
-        temporaryPublicStorage: true
-        
-    - name: Check performance scores
-      uses: treosh/lighthouse-ci-action@v12
-      with:
-        urls: https://adamsimms.xyz/
-        budgetPath: ./lighthouse-budget.json
-        uploadArtifacts: true
+      - name: Checkout code
+        uses: actions/checkout@v7
+
+      - name: Audit production URL and check budgets
+        uses: treosh/lighthouse-ci-action@v12
+        with:
+          urls: |
+            https://adamsimms.xyz/
+          budgetPath: ./lighthouse-budget.json
+          uploadArtifacts: true
+          temporaryPublicStorage: true
