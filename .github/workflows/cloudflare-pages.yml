@@ -19,6 +19,8 @@ jobs:
       pull-requests: write
 
     steps:
+      # LFS required so archive/2009 media (mp4/swf/ruffle) deploys as real files, not pointers.
+      # Skip LFS in CI — lint/format only need text.
       - name: Checkout code
         uses: actions/checkout@v7
         with:
