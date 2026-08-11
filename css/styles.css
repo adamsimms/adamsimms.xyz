@@ -472,7 +472,6 @@ html[data-tod='night'] .body--home {
   text-decoration: none;
   padding: 0.1em 0.12em;
   box-decoration-break: clone;
-  box-decoration-break: clone;
   background-image:
     linear-gradient(var(--link), var(--link)),
     linear-gradient(
