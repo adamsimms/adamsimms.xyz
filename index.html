@@ -42,7 +42,7 @@
 
     <!-- Stylesheets -->
     <link href="/css/normalize.css?v=20260811" rel="stylesheet" />
-    <link href="/css/styles.css?v=20260811" rel="stylesheet" />
+    <link href="/css/styles.css?v=20260812d" rel="stylesheet" />
 
     <!-- umami-analytics:start -->
     <script
@@ -97,16 +97,6 @@
     </script>
   </head>
   <body class="body body--home">
-    <script>
-      (() => {
-        const hour = new Date().getHours();
-        let tod = 'day';
-        if (hour >= 5 && hour < 11) tod = 'morning';
-        else if (hour >= 17 && hour < 21) tod = 'evening';
-        else if (hour >= 21 || hour < 5) tod = 'night';
-        document.documentElement.dataset.tod = tod;
-      })();
-    </script>
     <a href="#main-content" class="skip-navigation">Skip to main content</a>
 
     <div class="site-sheet">
@@ -169,12 +159,28 @@
           <section class="home-lead" aria-label="Introduction">
             <p class="home-lead__text">
               I make
-              <a href="https://art.adamsimms.xyz/" target="_blank" rel="noopener noreferrer">art</a
+              <a
+                data-door="art"
+                href="https://art.adamsimms.xyz/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-keyshortcuts="1"
+                >art</a
               >, teach
-              <a href="https://syllabi.adamsimms.xyz/" target="_blank" rel="noopener noreferrer"
+              <a
+                data-door="photo"
+                href="https://syllabi.adamsimms.xyz/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-keyshortcuts="2"
                 >photography</a
               >, and build
-              <a href="https://github.com/adamsimms" target="_blank" rel="noopener noreferrer"
+              <a
+                data-door="software"
+                href="https://github.com/adamsimms"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-keyshortcuts="3"
                 >software</a
               >. I&rsquo;ve worked at
               <a href="https://trello.com/" target="_blank" rel="noopener noreferrer">Trello</a>,
@@ -205,6 +211,10 @@
               >.
             </p>
 
+            <p class="visually-hidden">
+              Keyboard: 1 opens art, 2 opens photography, 3 opens software, C opens scheduling.
+            </p>
+
             <nav class="home-links" aria-label="Contact and links">
               <a href="https://art.adamsimms.xyz/" target="_blank" rel="noopener noreferrer">Art</a>
               <a href="https://syllabi.adamsimms.xyz/" target="_blank" rel="noopener noreferrer"
@@ -221,9 +231,11 @@
               >
               <a
                 class="home-links__cta"
+                data-door="cal"
                 href="https://cal.com/adam-simms-ivi9mt/1-hour-meeting"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-keyshortcuts="c"
                 >Let&rsquo;s Collaborate</a
               >
             </nav>
@@ -231,5 +243,7 @@
         </article>
       </main>
     </div>
+
+    <script src="/js/home.js?v=20260812d" defer></script>
   </body>
 </html>
