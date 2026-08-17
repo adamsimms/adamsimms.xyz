@@ -63,6 +63,14 @@ npm run deploy            # Deploy production
 npm run deploy:preview    # Deploy preview branch
 ```
 
+## Archive media (R2)
+
+Large `/archive/2009` assets (images, MP4, SWF, Ruffle) are stored in R2 bucket **`design-adamsimms-xyz-archive`** and served by Pages Functions after Basic Auth. The deploy workflow does **not** use Git LFS.
+
+- Binding name: `ARCHIVE_BUCKET` (see `wrangler.toml`)
+- `.cfignore` keeps those binaries out of Pages uploads
+- Local binary copies under `archive/2009/` are gitignored; upload changes with `wrangler r2 object put … --remote`
+
 ## Headers and redirects
 
 - `_headers` — Security headers (CSP, X-Frame-Options, etc.)
@@ -80,6 +88,14 @@ This site uses [Umami Cloud](https://umami.is/) (Hobby plan) for privacy-friendl
 The tracker is limited to `adamsimms.xyz` and `syllabi.adamsimms.xyz` via `data-domains`. Archive pages are not tracked.
 
 Syllabi use the same website ID — see [adamsimms/syllabi](https://github.com/adamsimms/syllabi).
+
+## Ghostpane analytics
+
+Ghostpane (`https://analytics.adamsimms.xyz/gp.js`) is installed on every HTML page on this domain, including `/now/`, the layout experiment, 404, and the 2009 archive. Configuration lives in `analytics.config.json` (`ghostpaneSiteId`). `npm run analytics:sync` injects the snippet.
+
+Optional capture: outbound links (`data-outbound`), Core Web Vitals (`data-vitals`), and media playback (`data-video`). Cal.com links send a `Meeting` event. Localhost is ignored unless `data-local` is added.
+
+The same site ID is used on `art.adamsimms.xyz` and `syllabi.adamsimms.xyz`.
 
 ## Troubleshooting
 

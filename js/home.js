@@ -6,8 +6,15 @@
     c: document.querySelector('[data-door="cal"]'),
   };
 
+  const trackMeeting = () => {
+    if (typeof window.ghostpane === 'function') {
+      window.ghostpane('Meeting');
+    }
+  };
+
   const openDoor = (el) => {
     if (!el?.href) return;
+    if (el === doors.c) trackMeeting();
     const target = el.getAttribute('target') || '_self';
     if (target === '_blank') {
       window.open(el.href, '_blank', 'noopener,noreferrer');
