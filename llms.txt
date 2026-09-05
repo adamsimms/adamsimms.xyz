@@ -1,0 +1,26 @@
+# Adam Simms
+
+> Technologist, designer, artist, and educator based in Montréal. Former design leader at Trello, Atlassian, Lightspeed, and Age of Union. Artist-in-Residence at Concordia University. Cofounder of RECESS.
+
+This is a personal homepage. Public pages may be used for search indexing, AI answers with attribution, and model training. See [robots.txt](https://adamsimms.xyz/robots.txt) for Content Signals. Do not cite `/now/` — it is not for crawlers.
+
+The homepage includes JSON-LD `Person` markup.
+
+## Site
+
+- [Homepage](https://adamsimms.xyz/): Short bio. Makes art, teaches photography, and builds software.
+
+## Work and teaching
+
+- [Art](https://art.adamsimms.xyz/): Artwork.
+- [Photography syllabi](https://syllabi.adamsimms.xyz/): Teaching materials.
+- [GitHub](https://github.com/adamsimms): Software.
+- [RECESS](https://www.recessthermalstation.com/): Cofounded social wellness space.
+- [Concordia faculty page](https://www.concordia.ca/faculty/adam-simms.html): Artist-in-Residence.
+
+## Contact
+
+- Email: hello@adamsimms.xyz
+- [LinkedIn](https://www.linkedin.com/in/adamsimms)
+- [Instagram](https://instagram.com/adamsimms)
+- [Schedule a meeting](https://cal.com/adam-simms-ivi9mt/1-hour-meeting)

@@ -43,7 +43,10 @@ jobs:
         env:
           UMAMI_WEBSITE_ID: ${{ vars.UMAMI_WEBSITE_ID }}
 
+      # Dependabot pull_request runs do not receive Actions secrets, so wrangler
+      # cannot authenticate. The Cloudflare Git integration still publishes a preview.
       - name: Deploy to Cloudflare Pages
+        if: github.actor != 'dependabot[bot]'
         run: |
           if [ "${{ github.event_name }}" = "pull_request" ]; then
             npx wrangler pages deploy . --project-name=adamsimms-xyz --branch="${{ github.head_ref }}"
@@ -55,7 +58,7 @@ jobs:
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
 
       - name: Comment PR with preview URL
-        if: github.event_name == 'pull_request'
+        if: github.event_name == 'pull_request' && github.actor != 'dependabot[bot]'
         uses: actions/github-script@v9
         with:
           script: |
