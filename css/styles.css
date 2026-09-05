@@ -357,22 +357,8 @@ html {
     url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='36' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M12 5v14M5 12h14' stroke='%231a1a1a' stroke-width='1.75' stroke-linecap='square'/%3E%3C/svg%3E")
       18 18,
     crosshair;
-  --bg-wash: #fafafa;
 
-  background: var(--bg-wash);
-  transition: background-color 0.6s ease;
-}
-
-html[data-tod='morning'] .body--home {
-  --bg-wash: #f3f6f9;
-}
-
-html[data-tod='evening'] .body--home {
-  --bg-wash: #faf6f1;
-}
-
-html[data-tod='night'] .body--home {
-  --bg-wash: #f2f3f5;
+  background: #fafafa;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -381,26 +367,15 @@ html[data-tod='night'] .body--home {
       url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='36' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M12 5v14M5 12h14' stroke='%23f2f2f2' stroke-width='1.75' stroke-linecap='square'/%3E%3C/svg%3E")
         18 18,
       crosshair;
-    --bg-wash: #111;
-  }
 
-  html[data-tod='morning'] .body--home {
-    --bg-wash: #0e1216;
-  }
-
-  html[data-tod='evening'] .body--home {
-    --bg-wash: #14110e;
-  }
-
-  html[data-tod='night'] .body--home {
-    --bg-wash: #0c0c0d;
+    background: #111;
   }
 }
 
 .body--home .site-sheet {
   width: 100%;
   min-height: 100dvh;
-  background: var(--bg-wash);
+  background: inherit;
 }
 
 @media (prefers-reduced-motion: no-preference) {
