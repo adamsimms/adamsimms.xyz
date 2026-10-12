@@ -2,7 +2,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 
 export const UMAMI_SCRIPT_URL = 'https://cloud.umami.is/script.js';
-export const UMAMI_DOMAINS = 'adamsimms.xyz,syllabi.adamsimms.xyz';
+export const UMAMI_DOMAINS = 'adamsimms.xyz,teaching.adamsimms.xyz';
 export const UMAMI_CONNECT_SRC =
   'https://cloud.umami.is https://gateway.umami.is https://api-gateway.umami.dev';
 export const GHOSTPANE_SCRIPT_URL = 'https://analytics.adamsimms.xyz/gp.js';

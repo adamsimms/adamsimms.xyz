@@ -85,9 +85,9 @@ This site uses [Umami Cloud](https://umami.is/) (Hobby plan) for privacy-friendl
 3. Run `npm run analytics:sync` to inject the tracker into `index.html`.
 4. Deploy.
 
-The tracker is limited to `adamsimms.xyz` and `syllabi.adamsimms.xyz` via `data-domains`. Archive pages are not tracked.
+The tracker is limited to `adamsimms.xyz` and `teaching.adamsimms.xyz` via `data-domains`. Archive pages are not tracked.
 
-Syllabi use the same website ID — see [adamsimms/syllabi](https://github.com/adamsimms/syllabi).
+Teaching uses the same website ID. See [adamsimms/teaching](https://github.com/adamsimms/teaching).
 
 ## Ghostpane analytics
 
@@ -95,7 +95,7 @@ Ghostpane (`https://analytics.adamsimms.xyz/gp.js`) is installed on every HTML p
 
 Optional capture: outbound links (`data-outbound`), Core Web Vitals (`data-vitals`), and media playback (`data-video`). Cal.com links send a `Meeting` event. Localhost is ignored unless `data-local` is added.
 
-The same site ID is used on `art.adamsimms.xyz` and `syllabi.adamsimms.xyz`.
+The same site ID is used on `art.adamsimms.xyz` and `teaching.adamsimms.xyz`.
 
 ## Troubleshooting
 

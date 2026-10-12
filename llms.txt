@@ -13,7 +13,7 @@ The homepage includes JSON-LD `Person` markup.
 ## Work and teaching
 
 - [Art](https://art.adamsimms.xyz/): Artwork.
-- [Photography syllabi](https://syllabi.adamsimms.xyz/): Teaching materials.
+- [Teaching](https://teaching.adamsimms.xyz/): Photography course materials.
 - [GitHub](https://github.com/adamsimms): Software.
 - [RECESS](https://www.recessthermalstation.com/): Cofounded social wellness space.
 - [Concordia faculty page](https://www.concordia.ca/faculty/adam-simms.html): Artist-in-Residence.
