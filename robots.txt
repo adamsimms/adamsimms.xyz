@@ -2,5 +2,7 @@ User-agent: *
 Content-Signal: search=yes, ai-input=yes, ai-train=yes
 Allow: /
 Disallow: /now/
+Disallow: /archive/
+Disallow: /2009/
 
 Sitemap: https://adamsimms.xyz/sitemap.xml

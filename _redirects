@@ -13,6 +13,36 @@ http://www.adamsimms.xyz/* https://adamsimms.xyz/:splat 301!
 # Portfolio archive (2009–2014)
 /2009/* /archive/2009/:splat 301
 
+# Browsers request these at the root. The files live under /images/.
+/favicon.ico /images/favicon.ico 301
+/apple-touch-icon.png /images/webclip.png 301
+/apple-touch-icon-precomposed.png /images/webclip.png 301
+
+# Paths that moved to the art site and the teaching site.
+/art https://art.adamsimms.xyz/ 301
+/art/ https://art.adamsimms.xyz/ 301
+/about https://art.adamsimms.xyz/about 301
+/about/ https://art.adamsimms.xyz/about 301
+/cv https://art.adamsimms.xyz/cv 301
+/cv/ https://art.adamsimms.xyz/cv 301
+/resume https://art.adamsimms.xyz/cv 301
+/resume/ https://art.adamsimms.xyz/cv 301
+/work https://art.adamsimms.xyz/works 301
+/work/ https://art.adamsimms.xyz/works 301
+/works https://art.adamsimms.xyz/works 301
+/works/ https://art.adamsimms.xyz/works 301
+/blog https://art.adamsimms.xyz/ 301
+/blog/ https://art.adamsimms.xyz/ 301
+/blog/* https://art.adamsimms.xyz/ 301
+/teaching https://teaching.adamsimms.xyz/ 301
+/teaching/ https://teaching.adamsimms.xyz/ 301
+/syllabi https://teaching.adamsimms.xyz/ 301
+/syllabi/ https://teaching.adamsimms.xyz/ 301
+/photo https://teaching.adamsimms.xyz/ 301
+/photo/ https://teaching.adamsimms.xyz/ 301
+/photography https://teaching.adamsimms.xyz/ 301
+/photography/ https://teaching.adamsimms.xyz/ 301
+
 # SPA fallback - serve index.html for all non-file requests
 # (Uncomment if you add client-side routing later)
 # /* /index.html 200
