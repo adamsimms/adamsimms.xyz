@@ -4,7 +4,7 @@ CV for Adam Simms — technologist, designer, artist, and educator.
 
 ## Overview
 
-A static website showcasing professional work, education, and creative projects. Built with semantic HTML and CSS, deployed on Cloudflare Pages.
+A static website showcasing professional work, education, and creative projects. Built with semantic HTML and CSS, deployed on Cloudflare Pages. `/reading/` is generated from a dedicated Zotero collection at deploy time.
 
 ## Tech stack
 
@@ -23,6 +23,7 @@ adamsimms.xyz/
 ├── images/             # Favicon and social images
 ├── index.html           # Homepage
 ├── now/                 # Now page (hidden from search engines)
+├── reading/             # Reading list (synced from Zotero)
 ├── 404.html             # Custom error page
 ├── _headers             # Security headers
 ├── _redirects           # URL redirects
@@ -55,6 +56,7 @@ The site will be available at `http://localhost:3000`.
 - `npm run lint` — Run HTML and CSS linters
 - `npm run format` — Format code with Prettier
 - `npm run validate` — Alias for `npm run lint`
+- `npm run reading:sync`: Pull the public reading list from Zotero into `reading/index.html`
 - `npm run lighthouse` — Run a Lighthouse audit against production
 - `npm run deploy` — Deploy to Cloudflare Pages via Wrangler
 

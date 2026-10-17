@@ -43,8 +43,14 @@ const umamiEnd = '    <!-- umami-analytics:end -->';
 const ghostpaneStart = '    <!-- ghostpane-analytics:start -->';
 const ghostpaneEnd = '    <!-- ghostpane-analytics:end -->';
 
-const umamiTargets = ['index.html'];
-const ghostpaneTargets = ['index.html', 'now/index.html', 'experiment.html', '404.html'];
+const umamiTargets = ['index.html', 'reading/index.html'];
+const ghostpaneTargets = [
+  'index.html',
+  'now/index.html',
+  'reading/index.html',
+  'experiment.html',
+  '404.html',
+];
 
 for (const relativePath of umamiTargets) {
   const filePath = path.join(rootDir, relativePath);

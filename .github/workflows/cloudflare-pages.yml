@@ -7,6 +7,9 @@ on:
   pull_request:
     branches:
       - main
+  schedule:
+    - cron: '17 11 * * *'
+  workflow_dispatch:
 
 jobs:
   deploy:
@@ -34,6 +37,14 @@ jobs:
 
       - name: Install dependencies
         run: npm ci
+
+      - name: Sync reading list from Zotero
+        run: npm run reading:sync -- --optional
+        env:
+          ZOTERO_API_KEY: ${{ secrets.ZOTERO_API_KEY }}
+          ZOTERO_USER_ID: ${{ secrets.ZOTERO_USER_ID }}
+          ZOTERO_COLLECTION_KEY: ${{ secrets.ZOTERO_COLLECTION_KEY }}
+          ZOTERO_COLLECTION_PATH: ${{ vars.ZOTERO_COLLECTION_PATH }}
 
       - name: Run linting
         run: npm run lint

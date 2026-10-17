@@ -1,6 +1,6 @@
 # Deployment
 
-The site is hosted on [Cloudflare Pages](https://pages.cloudflare.com/). There is no build step — static files are deployed as-is.
+The site is hosted on [Cloudflare Pages](https://pages.cloudflare.com/). HTML and CSS deploy as-is. The reading list is refreshed from Zotero during GitHub Actions deploys when an API key is present.
 
 ## Quick start
 
@@ -48,8 +48,33 @@ For automatic deployments, add these repository secrets:
 | ----------------------- | ----------------------------------------------------- |
 | `CLOUDFLARE_API_TOKEN`  | API token with **Cloudflare Pages — Edit** permission |
 | `CLOUDFLARE_ACCOUNT_ID` | Your Cloudflare account ID                            |
+| `ZOTERO_API_KEY`        | Zotero API key with personal library **read** access  |
 
-Get these from [dash.cloudflare.com/profile/api-tokens](https://dash.cloudflare.com/profile/api-tokens) and your account dashboard.
+Get the Cloudflare values from [dash.cloudflare.com/profile/api-tokens](https://dash.cloudflare.com/profile/api-tokens) and your account dashboard.
+
+Optional: `ZOTERO_USER_ID` and `ZOTERO_COLLECTION_KEY` if you do not want the script to discover them. Optional repository variable `ZOTERO_COLLECTION_PATH` (default `Website/Reading`).
+
+## Reading list (Zotero)
+
+`/reading/` is a static page. Zotero stays the source of titles, authors, links, and notes. Deploy (and a daily schedule) runs `npm run reading:sync -- --optional`.
+
+1. In Zotero, create collection `Website`, then `Reading` inside it.
+2. Add one subcollection per theme. Leading numbers are stripped in the heading (`1. Civilization` becomes Civilization).
+3. Put only public items in those folders. Fill `url` (or DOI). Optional Extra fields:
+
+```
+reading-note: Short commentary
+reading-quote: Standout passage
+reading-cite: Wendell Berry
+reading-order: 1
+```
+
+Tag an item `quote` to render a blockquote instead of a list line.
+
+4. Create a key at [zotero.org/settings/keys](https://www.zotero.org/settings/keys) with library read, not write, and not file access.
+5. Add `ZOTERO_API_KEY` as a GitHub Actions secret. Locally, put it in `.env` and run `npm run reading:sync`.
+
+Do not point this at the whole library. The public page is a short, adapted subset.
 
 ## Preview deployments
 
@@ -91,7 +116,7 @@ Teaching uses the same website ID. See [adamsimms/teaching](https://github.com/a
 
 ## Ghostpane analytics
 
-Ghostpane (`https://analytics.adamsimms.xyz/gp.js`) is installed on every HTML page on this domain, including `/now/`, the layout experiment, 404, and the 2009 archive. Configuration lives in `analytics.config.json` (`ghostpaneSiteId`). `npm run analytics:sync` injects the snippet.
+Ghostpane (`https://analytics.adamsimms.xyz/gp.js`) is installed on every HTML page on this domain, including `/now/`, `/reading/`, the layout experiment, 404, and the 2009 archive. Configuration lives in `analytics.config.json` (`ghostpaneSiteId`). `npm run analytics:sync` injects the snippet.
 
 Optional capture: outbound links (`data-outbound`), Core Web Vitals (`data-vitals`), and media playback (`data-video`). Cal.com links send a `Meeting` event. Localhost is ignored unless `data-local` is added.
 

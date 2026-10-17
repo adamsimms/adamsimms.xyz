@@ -4,6 +4,7 @@
   X-XSS-Protection: 1; mode=block
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: camera=(), microphone=(), geolocation=()
+  Strict-Transport-Security: max-age=31536000; includeSubDomains
 
 # Main site only — do not put CSP on /* or /archive/* also inherits it
 # and browsers AND multiple CSP headers together (blocking Ruffle WASM).
@@ -13,10 +14,19 @@
 /now/*
   Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://cloud.umami.is https://analytics.adamsimms.xyz; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://cloud.umami.is https://gateway.umami.is https://api-gateway.umami.dev https://analytics.adamsimms.xyz
 
+/reading/*
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://cloud.umami.is https://analytics.adamsimms.xyz; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data: https:; connect-src 'self' https://cloud.umami.is https://gateway.umami.is https://api-gateway.umami.dev https://analytics.adamsimms.xyz
+
 /experiment.html
   Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://cloud.umami.is https://analytics.adamsimms.xyz; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://cloud.umami.is https://gateway.umami.is https://api-gateway.umami.dev https://analytics.adamsimms.xyz
 
+/experiment
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://cloud.umami.is https://analytics.adamsimms.xyz; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://cloud.umami.is https://gateway.umami.is https://api-gateway.umami.dev https://analytics.adamsimms.xyz
+
 /404.html
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://cloud.umami.is https://analytics.adamsimms.xyz; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://cloud.umami.is https://gateway.umami.is https://api-gateway.umami.dev https://analytics.adamsimms.xyz
+
+/404
   Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://cloud.umami.is https://analytics.adamsimms.xyz; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://cloud.umami.is https://gateway.umami.is https://api-gateway.umami.dev https://analytics.adamsimms.xyz
 
 # Archive CSP is set in functions/_middleware.js (avoids stacking with other path rules).

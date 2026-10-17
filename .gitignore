@@ -41,6 +41,20 @@ lighthouse-report.html
 .env.*.local
 .dev.vars
 
+# Generated Zotero snapshot (HTML is the committed/deployed page)
+reading/data.json
+
+# Archive binaries live in R2 (design-adamsimms-xyz-archive), not Git
+archive/2009/**/*.mp4
+archive/2009/**/*.swf
+archive/2009/**/*.wasm
+archive/2009/**/*.png
+archive/2009/**/*.jpg
+archive/2009/**/*.jpeg
+archive/2009/**/*.gif
+archive/2009/**/*.ico
+archive/2009/js/ruffle/
+
 # Temporary files
 *.tmp
 *.temp
