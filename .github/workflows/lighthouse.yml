@@ -1,9 +1,7 @@
 name: Lighthouse Performance Audit
 
 on:
-  schedule:
-    # Run daily at 2 AM UTC
-    - cron: '0 2 * * *'
+  # Manual only. The nightly schedule failed every run since 2026-08-08 against lighthouse-budget.json.
   workflow_dispatch:
 
 jobs:
