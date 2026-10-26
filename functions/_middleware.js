@@ -13,6 +13,35 @@ function isProtectedPath(pathname) {
   );
 }
 
+// Pages deploys the repo root, so tooling and docs would otherwise be public.
+const REPO_FILES = new Set([
+  '/CITATION.cff',
+  '/DEPLOYMENT.md',
+  '/LICENSE',
+  '/README.md',
+  '/SECURITY.md',
+  '/analytics.config.json',
+  '/lighthouse-budget.json',
+  '/package-lock.json',
+  '/package.json',
+]);
+
+function isRepoFile(pathname) {
+  if (REPO_FILES.has(pathname) || pathname.startsWith('/scripts/')) {
+    return true;
+  }
+  return pathname
+    .split('/')
+    .some((segment) => segment.startsWith('.') && segment !== '.well-known');
+}
+
+async function notFound(request, env) {
+  const page = await env.ASSETS.fetch(new URL('/404', request.url));
+  const headers = new Headers(page.headers);
+  headers.set('X-Robots-Tag', 'noindex');
+  return new Response(page.body, { status: 404, headers });
+}
+
 function unauthorized() {
   return new Response('Authentication required.', {
     status: 401,
@@ -123,6 +152,10 @@ async function serveArchiveAsset(request, env, pathname) {
 export async function onRequest(context) {
   const { request, env, next } = context;
   const { pathname } = new URL(request.url);
+
+  if (isRepoFile(pathname)) {
+    return notFound(request, env);
+  }
 
   if (!isProtectedPath(pathname)) {
     return next();
