@@ -63,3 +63,6 @@ archive/2009/js/ruffle/
 # Logs
 logs/
 *.log
+
+# Wrangler local cache
+.wrangler/
