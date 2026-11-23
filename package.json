@@ -47,7 +47,7 @@
     "prettier": "^3.10.1",
     "stylelint": "^16.3.1",
     "stylelint-config-standard": "^36.0.0",
-    "wrangler": "^4.161.0"
+    "wrangler": "^4.165.0"
   },
   "overrides": {
     "undici": "^7.30.1"
